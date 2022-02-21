@@ -2,6 +2,7 @@ import { Row, Col } from "react-bootstrap"
 import ActivitiesCard from "./ActivitiesCard"
 import AnalysisCard from "./AnalysisCard"
 import InfosCard from "./InfosCard"
+import ProfileMain from "./ProfileMain"
 import ResourcesCard from "./Resourcescard"
 
 const MainSection = () => {
@@ -9,6 +10,7 @@ const MainSection = () => {
         <Row className="m-auto" >
 
 <Col md={8}>
+  <ProfileMain/>
 <AnalysisCard/>
 <ResourcesCard/>
 <InfosCard/>
