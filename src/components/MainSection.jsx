@@ -1,6 +1,7 @@
 import { Row, Col } from "react-bootstrap"
 import ActivitiesCard from "./ActivitiesCard"
 import AnalysisCard from "./AnalysisCard"
+import ExperienceCard from "./ExperienceCard"
 import InfosCard from "./InfosCard"
 import ProfileMain from "./ProfileMain"
 import ResourcesCard from "./Resourcescard"
@@ -15,6 +16,7 @@ const MainSection = () => {
 <ResourcesCard/>
 <InfosCard/>
 <ActivitiesCard/>
+<ExperienceCard/>
 </Col>
 <Col md={4}>
 </Col>
