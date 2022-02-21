@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 export default function InterestCard(props) {
 
-  const [section, setSection] = useState(0)
+  const [section, setSection] = useState(1)
   return( 
     <>
   <div className="card-section p-4 mb-3">
