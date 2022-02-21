@@ -7,26 +7,30 @@ import InfosCard from "./InfosCard"
 import LicensesCard from "./LicensesCard"
 import ProfileMain from "./ProfileMain"
 import ResourcesCard from "./Resourcescard"
+import SidebarTop from "./SidebarTop"
+import SidebarTwo from "./SidebarTwo"
 
 const MainSection = () => {
-
-  return(  <div class="container">
-        <Row className="m-auto" >
-
-<Col md={8}>
-  <ProfileMain/>
-<AnalysisCard/>
-<ResourcesCard/>
-<InfosCard/>
-<ActivitiesCard/>
-<ExperienceCard/>
-<EducationCard/>
-<LicensesCard/>
-</Col>
-<Col md={4}>
-</Col>
-   </Row>
-</div>
+  return (
+    <div class="container">
+      <Row className="m-auto">
+        <Col md={8}>
+          <ProfileMain />
+          <AnalysisCard />
+          <ResourcesCard />
+          <InfosCard />
+          <ActivitiesCard />
+          <ExperienceCard />
+          <EducationCard />
+          <LicensesCard />
+        </Col>
+        <Col md={4}>
+          <SidebarTop />
+          <SidebarTwo />
+          <SidebarTwo />
+        </Col>
+      </Row>
+    </div>
   )
 }
 
