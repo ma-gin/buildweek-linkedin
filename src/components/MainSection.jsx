@@ -1,4 +1,5 @@
 import { Row, Col } from "react-bootstrap"
+import AnalysisCard from "./AnalysisCard"
 
 
 const MainSection = () => {
@@ -7,7 +8,7 @@ const MainSection = () => {
         <Row className="m-auto" >
 
 <Col md={8}>
-
+<AnalysisCard/>
 </Col>
 <Col md={4}>
 
