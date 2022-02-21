@@ -2,7 +2,7 @@ import SideProfile from "./SideProfile"
 
 export default function SidebarTwo() {
   return (
-    <div className="card-section p-3">
+    <div className="card-section p-3 mb-3">
       <h6 className="people-title font-weight-bold">People Also Viewed</h6>
       <SideProfile
         img={
