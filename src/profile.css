@@ -67,3 +67,8 @@
   font-weight: bold;
   width: 90px;
 }
+
+.credential-btn {
+  border: 2px solid gray;
+  font-weight: bold;
+}

@@ -1,4 +1,4 @@
-import { Image } from "react-bootstrap"
+import { Image, Button } from "react-bootstrap"
 function LicenseCardSec(props) {
 
     return (
@@ -9,7 +9,9 @@ function LicenseCardSec(props) {
                 <h5>{props.titleText}</h5>
                 <span className="d-block">{props.description}</span>
                 <span className="d-block">{props.period}</span>
-                <span className="d-block">Button placeholder</span>
+                <Button className="generic-btn credential-btn" variant="outline-secondary">
+          See credentials
+        </Button>
             </div>
         </div>
 
