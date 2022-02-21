@@ -53,6 +53,12 @@ h6 {
   overflow-wrap: break-word;
 }
 
+/* ---navbar Start */
+.bi-linkedin {
+  color: rgba(22, 45, 245, 0.918);
+  /* width: 80px !important; */
+}
+/* --navbar end--- */
 .card-section {
   display: flex;
   flex-direction: column;
