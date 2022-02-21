@@ -10,12 +10,12 @@ import LicensesCard from "./LicensesCard"
 import ProfileMain from "./ProfileMain"
 import ResourcesCard from "./Resourcescard"
 import SidebarTop from "./SidebarTop"
-import SidebarTwo from "./SidebarTwo"
+import SidebarPeople from "./SidebarPeople"
 import SkillsCard from "./SkillsCard"
 
 const MainSection = () => {
   return (
-    <div class="container">
+    <div className="container">
       <Row className="m-auto">
         <Col md={8}>
           <ProfileMain />
@@ -32,8 +32,8 @@ const MainSection = () => {
         </Col>
         <Col md={4}>
           <SidebarTop />
-          <SidebarTwo />
-          <SidebarTwo />
+          <SidebarPeople sectionTitle={"People Also Viewed"} />
+          <SidebarPeople sectionTitle={"People you may know"} />
         </Col>
       </Row>
     </div>

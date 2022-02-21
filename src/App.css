@@ -101,7 +101,7 @@ h6 {
   width: 100%;
   border-radius: 8px;
   background-color: var(--white-bg) !important;
-  border: 1px solid gray;
+  border: 1px solid hsla(0, 0%, 63%, 0.35);
 }
 
 .generic-btn {
@@ -117,7 +117,7 @@ h6 {
   font-weight: bold;
 }
 
-.experience-image{
+.experience-image {
   width: 8%;
   height: 8%;
   margin-right: 10px;
@@ -132,6 +132,5 @@ h6 {
 }
 
 .interest-titles{
-
   font-size: 12px;
 }

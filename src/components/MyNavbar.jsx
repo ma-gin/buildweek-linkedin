@@ -1,4 +1,4 @@
-import { Navbar, Form, Nav, FormControl, NavDropdown } from "react-bootstrap";
+import { Navbar, Form, Nav, FormControl, NavDropdown } from "react-bootstrap"
 const MyNavbar = function (props) {
   return (
     <Navbar bg="light" expand="lg" className="mb-4">
@@ -60,7 +60,7 @@ const MyNavbar = function (props) {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-  );
-};
+  )
+}
 
-export default MyNavbar;
+export default MyNavbar

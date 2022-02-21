@@ -27,45 +27,48 @@
 }
 
 .work-card {
-  background-color: antiquewhite !important;
+  background-color: hsla(33, 31%, 87%, 0.5) !important;
 }
 .pen-lg {
   position: absolute;
-  font-size: 20px;
+  font-size: 16px;
   top: 210px;
   right: 20px;
 }
 .icon-tr {
   position: absolute;
   right: 10px;
-}
-.open-card {
   font-size: 14px;
 }
-.smaller-font {
-  font-size: 14px;
-  font-weight: bold;
+.font-12 {
+  font-size: 12px !important;
 }
-.text-gray {
-  font-size: 14px;
-  font-weight: bold;
-  color: gray;
+.font-13 {
+  font-size: 13px !important;
+}
+.font-14 {
+  font-size: 14px !important;
 }
 .side-profile-img {
-  width: 40px;
-  height: 40px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
+  margin-top: 6px;
   margin-right: 1rem;
   object-fit: cover;
 }
 .description-text {
-  font-size: 15px;
+  color: rgb(99, 99, 99);
 }
-
+.hr-line {
+  height: 1px;
+  width: 100%;
+  background-color: hsla(0, 0%, 79%, 0.46);
+}
 .side-btn {
   border: 2px solid gray;
-  font-weight: bold;
-  width: 90px;
+  width: fit-content;
+  padding: 0.125rem 0.75rem !important;
 }
 
 .credential-btn {
