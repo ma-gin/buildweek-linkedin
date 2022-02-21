@@ -1,8 +1,30 @@
 import { Row, Col, Button } from "react-bootstrap"
+import { useEffect, useState } from "react"
 import "../App.css"
 import "../profile.css"
 
 export default function ProfileMain() {
+  const [user, setUser] = useState({})
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://striveschool-api.herokuapp.com/api/profile/me",
+          {
+            headers: {
+              Authorization:
+                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjE0MWMwMTA0NDhiNDAwMTUxMTY4OGQiLCJpYXQiOjE2NDU0ODUwNTcsImV4cCI6MTY0NjY5NDY1N30.RpYP2LhIfMwWh9okgKoO9hO9xHHxMIrpOw6PlnVfviI",
+            },
+          }
+        )
+        const data = await response.json()
+        setUser(data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    fetchData()
+  }, [])
   return (
     <div className="card-section profile-main mb-3">
       <img
@@ -10,20 +32,17 @@ export default function ProfileMain() {
         src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.fineartamerica.com%2Fimages%2Fartworkimages%2Fmediumlarge%2F3%2Fcurvy-mountain-road-idaho-tatiana-travelways.jpg&f=1&nofb=1"
         alt="cover"
       />
-      <img
-        className="profile-img"
-        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fc1.staticflickr.com%2F5%2F4018%2F4661169842_b3de099750_b.jpg&f=1&nofb=1"
-        alt="profile"
-      />
-      <i class="bi bi-pen pen-lg"></i>
+      <img className="profile-img" src={user.image} alt="profile" />
+      <i className="bi bi-pen pen-lg"></i>
       <div className="profile-card m-4">
         <Row>
           <Col xs={6}>
-            <h4 className="font-weight-bold">Javi Davidson</h4>
-            <h6>Senior Full Stack Developer</h6>
+            <h4 className="font-weight-bold">{user.name + user.surname}</h4>
+            <h6>{user.title}</h6>
             <div className="flexbox">
-              <h6>Santa Barbara, CA</h6>
-              <div className="link ml-3">Contact Info</div>
+              <h6>{user.area}</h6>
+              <span className="mx-2">·</span>
+              <div className="link">Contact Info</div>
             </div>
             <div className="link">500+ connections</div>
           </Col>
@@ -59,23 +78,23 @@ export default function ProfileMain() {
         </Row>
         <Row>
           <Col xs={6}>
-            <div className="card-section p-2 work-card position-relative open-card">
+            <div className="card-section p-2 work-card position-relative open-card font-12">
               <div className="font-weight-bold">Open to work</div>
               <div>Full Stack Developer roles</div>
-              <div className="link">See all details</div>
-              <i class="bi bi-pen icon-tr"></i>
+              <div className="link font-12">See all details</div>
+              <i className="bi bi-pen icon-tr"></i>
             </div>
           </Col>
           <Col xs={6}>
-            <div className="card-section p-2 position-relative pr-5 open-card">
+            <div className="card-section p-2 position-relative pr-5 open-card font-12">
               <div>
                 <span className="font-weight-bold">
                   Find potential clients{" "}
                 </span>
                 by showcasing the services your provide.
               </div>
-              <div className="link">Get started</div>
-              <i class="bi bi-x-lg icon-tr"></i>
+              <div className="link font-12">Get started</div>
+              <i className="bi bi-x-lg icon-tr"></i>
             </div>
           </Col>
         </Row>
