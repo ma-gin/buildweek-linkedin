@@ -27,7 +27,7 @@ const MyNavbar = function (props) {
             <i class="bi bi-bell-fill"></i>Notifications
           </Nav.Link>
 
-          <NavDropdown title="Me" id="basic-nav-dropdown">
+          <NavDropdown title="Me" id="profile-nav-dropdown">
             {/* props.profileImg */}
             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">
@@ -39,6 +39,21 @@ const MyNavbar = function (props) {
               Separated link
             </NavDropdown.Item>
           </NavDropdown>
+
+          <NavDropdown title="Work" id="work-nav-dropdown">
+            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2">
+              Another action
+            </NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#action/3.4">
+              Separated link
+            </NavDropdown.Item>
+          </NavDropdown>
+          <a href="" className="getHired">
+            Get Hired Faster,try Premium Free
+          </a>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
