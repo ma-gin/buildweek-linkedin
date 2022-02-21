@@ -7,6 +7,7 @@ import ProfileMain from "./ProfileMain"
 import ResourcesCard from "./Resourcescard"
 
 const MainSection = () => {
+
   return(  <div class="container">
         <Row className="m-auto" >
 
@@ -21,7 +22,7 @@ const MainSection = () => {
 <Col md={4}>
 </Col>
         </Row>
-    </div>
+
   )
 }
 
