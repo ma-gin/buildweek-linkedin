@@ -4,7 +4,7 @@ import "../profile.css"
 
 export default function ProfileMain() {
   return (
-    <div className="card-section profile-main">
+    <div className="card-section profile-main mb-3">
       <img
         className="profile-cover"
         src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.fineartamerica.com%2Fimages%2Fartworkimages%2Fmediumlarge%2F3%2Fcurvy-mountain-road-idaho-tatiana-travelways.jpg&f=1&nofb=1"
@@ -28,13 +28,21 @@ export default function ProfileMain() {
             <div className="link">500+ connections</div>
           </Col>
           <Col xs={6}>
+            <div className="d-flex align-items-center mb-1">
+              <img
+                className="profile-img-ed mr-2"
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcampuspress.yale.edu%2Fbulldogcubeclub%2Ffiles%2F2015%2F10%2FyaleNCAAlogoCropped-1mwd2sw.jpg&f=1&nofb=1"
+                alt="strive"
+              />
+              <h6 className="smaller-font">Yale University</h6>
+            </div>
             <div className="d-flex align-items-center">
               <img
                 className="profile-img-ed mr-2"
                 src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcoursereport-s3-production.global.ssl.fastly.net%2Frich%2Frich_files%2Frich_files%2F6256%2Fs300%2Fstrive-20school-20logo.png&f=1&nofb=1"
                 alt="strive"
               />
-              <h6>Strive School</h6>
+              <h6 className="smaller-font">Strive School</h6>
             </div>
           </Col>
         </Row>
