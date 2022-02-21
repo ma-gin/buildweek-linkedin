@@ -4,6 +4,7 @@ import AnalysisCard from "./AnalysisCard"
 import EducationCard from "./EducationCard"
 import ExperienceCard from "./ExperienceCard"
 import InfosCard from "./InfosCard"
+import InterestCard from "./InterestCard"
 import LanguagesCard from "./LanguagesCard"
 import LicensesCard from "./LicensesCard"
 import ProfileMain from "./ProfileMain"
@@ -27,6 +28,7 @@ const MainSection = () => {
           <LicensesCard />
           <SkillsCard/>
           <LanguagesCard/>
+          <InterestCard/>
         </Col>
         <Col md={4}>
           <SidebarTop />
