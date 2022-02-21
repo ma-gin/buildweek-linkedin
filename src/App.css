@@ -1,7 +1,7 @@
 :root {
   --body-bg: #f3f2ef;
   --white-bg: #fff;
-  --link-blue: #5b98db;
+  --link-blue: #3780ce;
   --text-black: #191919;
   --light-gray: #a7a7a7;
   --dark-gray: #646464;
@@ -23,6 +23,7 @@ html {
 }
 
 body {
+  background-color: var(--body-bg) !important;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -53,10 +54,71 @@ h6 {
   overflow-wrap: break-word;
 }
 
+/* ---navbar Start */
+.bi-linkedin {
+  color: rgba(43, 86, 202, 0.918);
+  font-size: 33px;
+}
+
+.bi-house-door-fill {
+  font-size: 25px;
+}
+.bi-people-fill {
+  font-size: 25px;
+}
+.bi-briefcase-fill {
+  font-size: 25px;
+}
+.chat-dots-fill {
+  font-size: 25px;
+}
+.bi-chat-dots-fill {
+  font-size: 25px;
+}
+.bi-bell-fill {
+  font-size: 25px;
+}
+
+/* .profileavatar {
+  font-size: 25px;
+}
+.bi-bricks {
+  font-size: 25px;
+} */
+
+.navbar {
+  font-size: 13px;
+}
+.getHired {
+  color: rgb(167, 53, 7);
+  text-align: center;
+}
+/* --navbar end--- */
+
 .card-section {
   display: flex;
   flex-direction: column;
   width: 100%;
   border-radius: 8px;
-  background-color: var(--white-bg);
+  background-color: var(--white-bg) !important;
+  border: 1px solid gray;
+}
+
+.generic-btn {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  border-radius: 20px !important;
+  margin-right: 8px;
+}
+
+.link {
+  color: var(--link-blue);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.experience-image{
+  width: 8%;
+  height: 8%;
+  margin-right: 10px;
 }
