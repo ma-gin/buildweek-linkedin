@@ -4,7 +4,7 @@ import ResourcesCardSec from "./ResourcesCardSec"
 export default function ResourcesCard(props) {
   return( 
     <>
-  <div className="card-section p-4">
+  <div className="card-section p-4 mb-3">
 
 <h4> Resources</h4>
 <div className='d-flex'>
