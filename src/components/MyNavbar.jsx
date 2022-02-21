@@ -10,7 +10,7 @@ const MyNavbar = function (props) {
       </Form>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
+        <Nav className="mr-auto  ">
           <Nav.Link href="#home">
             <i class="bi bi-house-door-fill"></i>Home
           </Nav.Link>
@@ -41,6 +41,7 @@ const MyNavbar = function (props) {
           </NavDropdown>
 
           <NavDropdown title="Work" id="work-nav-dropdown">
+            {/* <i class="bi bi-bricks"></i> */}
             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">
               Another action
@@ -52,7 +53,9 @@ const MyNavbar = function (props) {
             </NavDropdown.Item>
           </NavDropdown>
           <a href="" className="getHired">
-            Get Hired Faster,try Premium Free
+            Get Hired Faster,
+            <br />
+            Try Premium Free
           </a>
         </Nav>
       </Navbar.Collapse>
