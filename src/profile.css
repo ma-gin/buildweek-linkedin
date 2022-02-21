@@ -70,3 +70,8 @@
   width: fit-content;
   padding: 0.125rem 0.75rem !important;
 }
+
+.credential-btn {
+  border: 2px solid gray;
+  font-weight: bold;
+}
