@@ -9,6 +9,7 @@ function LicenseCardSec(props) {
                 <h5>{props.titleText}</h5>
                 <span className="d-block">{props.description}</span>
                 <span className="d-block">{props.period}</span>
+                <span className="d-block">Button placeholder</span>
             </div>
         </div>
 
