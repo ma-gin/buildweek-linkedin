@@ -4,9 +4,7 @@ import AnalysisCard from "./AnalysisCard"
 import InfosCard from "./InfosCard"
 import ResourcesCard from "./Resourcescard"
 
-
 const MainSection = () => {
-
   return(  <div class="container">
         <Row className="m-auto" >
 
@@ -17,11 +15,9 @@ const MainSection = () => {
 <ActivitiesCard/>
 </Col>
 <Col md={4}>
-
 </Col>
         </Row>
     </div>
-
   )
 }
 

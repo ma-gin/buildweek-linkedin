@@ -1,7 +1,7 @@
 :root {
   --body-bg: #f3f2ef;
   --white-bg: #fff;
-  --link-blue: #5b98db;
+  --link-blue: #3780ce;
   --text-black: #191919;
   --light-gray: #a7a7a7;
   --dark-gray: #646464;
@@ -23,6 +23,7 @@ html {
 }
 
 body {
+  background-color: var(--body-bg) !important;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -99,6 +100,19 @@ h6 {
   flex-direction: column;
   width: 100%;
   border-radius: 8px;
-  background-color: var(--white-bg);
+  background-color: var(--white-bg) !important;
   border: 1px solid gray;
+}
+
+.generic-btn {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  border-radius: 20px !important;
+  margin-right: 8px;
+}
+
+.link {
+  color: var(--link-blue);
+  font-size: 14px;
+  font-weight: bold;
 }
