@@ -54,6 +54,47 @@ h6 {
   overflow-wrap: break-word;
 }
 
+/* ---navbar Start */
+.bi-linkedin {
+  color: rgba(43, 86, 202, 0.918);
+  font-size: 33px;
+}
+
+.bi-house-door-fill {
+  font-size: 25px;
+}
+.bi-people-fill {
+  font-size: 25px;
+}
+.bi-briefcase-fill {
+  font-size: 25px;
+}
+.chat-dots-fill {
+  font-size: 25px;
+}
+.bi-chat-dots-fill {
+  font-size: 25px;
+}
+.bi-bell-fill {
+  font-size: 25px;
+}
+
+/* .profileavatar {
+  font-size: 25px;
+}
+.bi-bricks {
+  font-size: 25px;
+} */
+
+.navbar {
+  font-size: 13px;
+}
+.getHired {
+  color: rgb(167, 53, 7);
+  text-align: center;
+}
+/* --navbar end--- */
+
 .card-section {
   display: flex;
   flex-direction: column;
