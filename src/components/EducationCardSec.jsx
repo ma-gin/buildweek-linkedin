@@ -1,5 +1,5 @@
 import { Image } from "react-bootstrap"
-const EducationCardSec = (props) => {
+const SkillsCardSec = (props) => {
 
     return (
 
@@ -15,4 +15,4 @@ const EducationCardSec = (props) => {
     )
 }
 
-export default EducationCardSec
+export default SkillsCardSec
