@@ -21,8 +21,8 @@ const MainSection = () => {
 </Col>
 <Col md={4}>
 </Col>
-        </Row>
-
+   </Row>
+</div>
   )
 }
 
