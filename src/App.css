@@ -1,7 +1,7 @@
 :root {
   --body-bg: #f3f2ef;
   --white-bg: #fff;
-  --link-blue: #3780ce;
+  --link-blue: #2b56cae6;
   --text-black: #191919;
   --light-gray: #a7a7a7;
   --dark-gray: #646464;
@@ -55,39 +55,37 @@ h6 {
 }
 
 /* ---navbar Start */
+.navbar-full {
+  width: 100%;
+  background-color: var(--white-bg);
+}
 .bi-linkedin {
-  color: rgba(43, 86, 202, 0.918);
+  color: var(--link-blue);
   font-size: 33px;
 }
 
-.bi-house-door-fill {
+#basic-navbar-nav i {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
   font-size: 25px;
-}
-.bi-people-fill {
-  font-size: 25px;
-}
-.bi-briefcase-fill {
-  font-size: 25px;
-}
-.chat-dots-fill {
-  font-size: 25px;
-}
-.bi-chat-dots-fill {
-  font-size: 25px;
-}
-.bi-bell-fill {
-  font-size: 25px;
+  cursor: pointer;
 }
 
-/* .profileavatar {
-  font-size: 25px;
+.b-left {
+  border-left: 1px solid rgba(128, 128, 128, 0.5);
 }
-.bi-bricks {
-  font-size: 25px;
-} */
 
 .navbar {
   font-size: 13px;
+}
+
+.nav-link {
+  padding-top: 0 !important;
+}
+
+.navbar-nav {
+  margin-left: auto;
 }
 .getHired {
   color: rgb(167, 53, 7);
@@ -131,6 +129,6 @@ h6 {
   max-height: 35px;
 }
 
-.interest-titles{
+.interest-titles {
   font-size: 12px;
 }
