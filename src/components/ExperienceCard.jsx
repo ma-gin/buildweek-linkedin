@@ -48,10 +48,12 @@ export default function ExperienceCard(props) {
 
   const editSelect = () => {
     setEdit(!edit)
+    if (selected) setSelected(false)
   }
 
   const changeToggle = () => {
     setToggle(!toggle)
+    if (selected) setSelected(false)
   }
 
   const changeId = (value) => {
@@ -81,6 +83,8 @@ export default function ExperienceCard(props) {
               style={{ cursor: "pointer" }}
               onClick={() => {
                 setSelected(!selected)
+                if (toggle) setToggle(false)
+                if (edit) setEdit(false)
               }}></i>
             <i
               className="bi bi-pencil"
@@ -101,12 +105,14 @@ export default function ExperienceCard(props) {
             key={userex._id}
             experienceId={userex._id}
             selected={edit}
-            function={changeToggle}
+            realselected={selected}
+            toggle={changeToggle}
             experience={changeExper}
             company={userex.company}
             start={userex.startDate}
             end={userex.endDate}
             chanId={changeId}
+            fetch={fetchData}
           />
         ))}
         {selected === true && <AddExperience fetch={fetchData} />}
@@ -119,6 +125,7 @@ export default function ExperienceCard(props) {
             start={experience.startDate}
             end={experience.endDate}
             thisId={id}
+            fetch={fetchData}
           />
         )}
       </div>
