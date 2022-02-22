@@ -27,7 +27,6 @@ export default function ExperienceCard(props) {
   }, [])
 
   const fetchData = async () => {
-    // const dataFetch = "https://striveschool-api.herokuapp.com/api/profile/" + props.id + "/experiences"
     try {
       const response = await fetch(
         "https://striveschool-api.herokuapp.com/api/profile/62141c010448b4001511688d/experiences",
@@ -39,7 +38,6 @@ export default function ExperienceCard(props) {
         }
       )
       const data = await response.json()
-      console.log(data)
       setUser(data)
     } catch (error) {
       console.log(error)

@@ -13,7 +13,6 @@ const ModifyExperience = (props) => {
 
   const grabValue = (property, value) => {
     setExperience({ ...experience, [property]: value })
-    console.log(experience)
   }
 
   const handleSubmit = async (event) => {
@@ -40,12 +39,6 @@ const ModifyExperience = (props) => {
       console.log(error)
     }
   }
-  /* 
-  grab the info from the input,
-  assign it to the object state
-  on submit call postData
-
-  */
 
   return (
     <Form onSubmit={(event) => handleSubmit(event)}>
