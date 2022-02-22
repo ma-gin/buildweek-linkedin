@@ -40,7 +40,7 @@ const MyFooter = function () {
             <Dropdown>
               Select Language
               <Dropdown.Toggle variant="transparent" id="dropdown-basic">
-                have to be props
+                English(English)
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 <Dropdown.Item href="#/action-1">
