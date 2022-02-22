@@ -23,7 +23,7 @@ const ModifyExperience = (props) => {
 
     try {
       const response = await fetch(
-        "https://striveschool-api.herokuapp.com/api/profile/62141c010448b4001511688d/experiences/",
+        "https://striveschool-api.herokuapp.com/api/profile/62141c010448b4001511688d/experiences/"+ props.thisId,
         {
           method: "PUT",
           body: JSON.stringify(experience),
@@ -34,6 +34,9 @@ const ModifyExperience = (props) => {
           },
         }
       );
+      if (response.ok){
+        console.log('Experience modified successfully')
+      }
     } catch (error) {
       console.log(error);
     }

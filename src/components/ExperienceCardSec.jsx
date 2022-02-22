@@ -42,7 +42,7 @@ let variable = props.selected
             </div>
             </div>
             {variable === true &&<div className="d-flex">
-            <i className="bi bi-pencil mr-2" style={{ cursor: 'pointer'}} onClick={()=> {props.function(); props.experience(props.titleText, props.company, props.start, props.end, props.description, props.location )}}></i> 
+            <i className="bi bi-pencil mr-2" style={{ cursor: 'pointer'}} onClick={()=> {props.function(); props.experience(props.titleText, props.company, props.start, props.end, props.description, props.location ); props.chanId(props.experienceId)}}></i> 
             <i className="bi bi-trash3" style={{color:'red', cursor: 'pointer'}} onClick={()=> deleteData()}></i>
             </div>
             }</div>

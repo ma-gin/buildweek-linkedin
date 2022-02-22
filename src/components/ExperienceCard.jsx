@@ -11,6 +11,7 @@ export default function ExperienceCard(props) {
   const [edit, setEdit] = useState(false)
 
   const [toggle, setToggle] = useState(false)
+  const [id, setId] = useState(undefined)
 
   const [experience, setExperience] = useState({
     role: undefined,
@@ -53,13 +54,18 @@ export default function ExperienceCard(props) {
     setToggle(!toggle)
   }
 
+  const changeId = (value) => {
+    setId(value)
+  }
+
   const changeExper = (value1, value2, value3, value4, value5, value6) => {
     setExperience({  role: value1,
       company: value2,
       startDate:value3,
       endDate: value4,
       description: value5,
-      area: value6,})
+      area: value6,
+    value:7})
   }
 
   return (
@@ -96,6 +102,7 @@ export default function ExperienceCard(props) {
             company={userex.company}
             start={userex.startDate}
             end={userex.endDate}
+            chanId={changeId}
           />
         ))}
         {selected === true && <AddExperience />}
@@ -104,7 +111,9 @@ export default function ExperienceCard(props) {
             location={experience.area}
             company={experience.company}
             start={experience.startDate}
-            end={experience.endDate}/>}
+            end={experience.endDate}
+            thisId={id}/>}
+            
       </div>
     </>
   );
