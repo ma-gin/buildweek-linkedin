@@ -5,24 +5,26 @@ import "../profile.css"
 
 export default function ProfileMain() {
   const [user, setUser] = useState({})
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          "https://striveschool-api.herokuapp.com/api/profile/me",
-          {
-            headers: {
-              Authorization:
-                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjE0MWMwMTA0NDhiNDAwMTUxMTY4OGQiLCJpYXQiOjE2NDU0ODUwNTcsImV4cCI6MTY0NjY5NDY1N30.RpYP2LhIfMwWh9okgKoO9hO9xHHxMIrpOw6PlnVfviI",
-            },
-          }
-        )
-        const data = await response.json()
-        setUser(data)
-      } catch (error) {
-        console.log(error)
-      }
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch(
+        "https://striveschool-api.herokuapp.com/api/profile/me",
+        {
+          headers: {
+            Authorization:
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjE0MWMwMTA0NDhiNDAwMTUxMTY4OGQiLCJpYXQiOjE2NDU0ODUwNTcsImV4cCI6MTY0NjY5NDY1N30.RpYP2LhIfMwWh9okgKoO9hO9xHHxMIrpOw6PlnVfviI",
+          },
+        }
+      )
+      const data = await response.json()
+      setUser(data)
+    } catch (error) {
+      console.log(error)
     }
+  }
+  
+  useEffect(() => {
     fetchData()
   }, [])
   return (
@@ -37,7 +39,7 @@ export default function ProfileMain() {
       <div className="profile-card m-4">
         <Row>
           <Col xs={6}>
-            <h4 className="font-weight-bold">{user.name + user.surname}</h4>
+            <h4 className="font-weight-bold">{`${user.name} + ${user.surname}`}</h4>
             <h6>{user.title}</h6>
             <div className="flexbox">
               <h6>{user.area}</h6>
