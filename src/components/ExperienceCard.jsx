@@ -1,6 +1,7 @@
 import ExperienceCardSec from "./ExperienceCardSec";
 import { useEffect, useState } from "react";
 import AddExperience from "./AddExperience";
+import ModifyExperience from './ModifyExperience'
 
 export default function ExperienceCard(props) {
   const [user, setUser] = useState([]);
@@ -8,6 +9,17 @@ export default function ExperienceCard(props) {
   const [selected, setSelected] = useState(false);
 
   const [edit, setEdit] = useState(false)
+
+  const [toggle, setToggle] = useState(false)
+
+  const [experience, setExperience] = useState({
+    role: undefined,
+    company: undefined,
+    startDate: undefined,
+    endDate: undefined,
+    description: undefined,
+    area: undefined,
+  });
 
   useEffect(() => {
     fetchData();
@@ -35,6 +47,19 @@ export default function ExperienceCard(props) {
 
   const editSelect= () =>{
     setEdit(!edit)
+  }
+
+  const changeToggle = () => {
+    setToggle(!toggle)
+  }
+
+  const changeExper = (value1, value2, value3, value4, value5, value6) => {
+    setExperience({  role: value1,
+      company: value2,
+      startDate:value3,
+      endDate: value4,
+      description: value5,
+      area: value6,})
   }
 
   return (
@@ -66,9 +91,20 @@ export default function ExperienceCard(props) {
             key={userex._id}
             experienceId={userex._id}
             selected={edit}
+            function={changeToggle}
+            experience={changeExper}
+            company={userex.company}
+            start={userex.startDate}
+            end={userex.endDate}
           />
         ))}
         {selected === true && <AddExperience />}
+        {toggle === true && <ModifyExperience    role={experience.role}
+            description={experience.description}
+            location={experience.area}
+            company={experience.company}
+            start={experience.startDate}
+            end={experience.endDate}/>}
       </div>
     </>
   );

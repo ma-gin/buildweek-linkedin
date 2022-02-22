@@ -4,6 +4,7 @@ import { useState } from "react"
 
 const ExperienceCardSec = (props) => {
 
+
     const exId = "https://striveschool-api.herokuapp.com/api/profile/62141c010448b4001511688d/experiences/" + props.experienceId
 
     const deleteData = async () => {
@@ -40,8 +41,10 @@ let variable = props.selected
             <span className="d-block font-12" >{props.location}</span>
             </div>
             </div>
-            {variable === true &&
+            {variable === true &&<div className="d-flex">
+            <i className="bi bi-pencil mr-2" style={{ cursor: 'pointer'}} onClick={()=> {props.function(); props.experience(props.titleText, props.company, props.start, props.end, props.description, props.location )}}></i> 
             <i className="bi bi-trash3" style={{color:'red', cursor: 'pointer'}} onClick={()=> deleteData()}></i>
+            </div>
             }</div>
     )
 }
