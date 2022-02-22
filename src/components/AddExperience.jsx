@@ -48,7 +48,7 @@ const AddExperience = () => {
         <Form.Control
           type="text"
           placeholder="Enter role"
-          onKeyUp={(e) => grabValue("role", e.target.value)}
+          onKeyDown={(e) => grabValue("role", e.target.value)}
         />
       </Form.Group>
 
