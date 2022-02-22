@@ -66,7 +66,7 @@ export default function ProfileMain() {
           </Col>
         </Row>
         <Row>
-          <div className="pl-3 mt-2 mb-3">
+          <div className="pl-3 mt-4 d-flex align-items-center">
             <Button className="generic-btn">Open to</Button>
             <Button className="generic-btn" variant="outline-primary">
               Add profile section
@@ -76,7 +76,7 @@ export default function ProfileMain() {
             </Button>
           </div>
         </Row>
-        <Row>
+        <Row className="d-none">
           <Col xs={6}>
             <div className="card-section p-2 work-card position-relative open-card font-12">
               <div className="font-weight-bold">Open to work</div>
