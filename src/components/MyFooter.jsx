@@ -1,3 +1,4 @@
+/* change font size */
 import { Container, Row, Col } from "react-bootstrap";
 const MyFooter = function () {
   return (
@@ -29,7 +30,14 @@ const MyFooter = function () {
             <p>Advertising</p>
             <p>Small Business</p>
           </Col>
-          <Col md={2}>question</Col>
+          <Col md={2}>
+            <Row>
+              <i class="bi bi-question-circle-fill"></i>question
+            </Row>
+            <Row>
+              <i class="bi bi-gear-fill"></i> Manage
+            </Row>
+          </Col>
           <Col md={2}>dropdown</Col>
         </Row>
       </Container>
@@ -37,6 +45,4 @@ const MyFooter = function () {
   );
 };
 
-/* <i class="bi bi-question-circle-fill"></i> */
-/* <i class="bi bi-gear-fill"></i> */
 export default MyFooter;
