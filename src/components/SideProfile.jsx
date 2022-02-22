@@ -8,9 +8,11 @@ export default function SideProfile(props) {
         <div className="d-flex">
           <div className="font-weight-bold mr-2 side-name">{props.name}</div>
         </div>
-        <div className="description-text my-1 font-12">{props.description}</div>
+        <div className="description-text my-1 pr-3 font-12 text">
+          {props.description}
+        </div>
         <Button
-          className="generic-btn side-btn font-weight-bold"
+          className="mt-1 generic-btn side-btn font-weight-bold"
           variant="outline-secondary">
           Message
         </Button>
