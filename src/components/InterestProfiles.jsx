@@ -1,4 +1,3 @@
-import { Button } from "react-bootstrap"
 
 export default function InterestProfiles(props) {
   return (
@@ -9,8 +8,8 @@ export default function InterestProfiles(props) {
           <div className="font-weight-bold mr-2">{props.name}</div>
           <i className="bi bi-diamond-fill"></i>
         </div>
-        <span>{props.description}</span>
-        <span>1.697.452 follower</span>
+        <span className="font-14">{props.description}</span>
+        <span className="font-12">1.697.452 follower</span>
       </div>
     </div>
   )

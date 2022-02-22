@@ -9,7 +9,7 @@ export default function SkillsCard(props) {
 
 
 <div className='d-flex justify-content-between'>
-<h4> Skills</h4>
+<h4 className='mb-3'> Skills</h4>
 <div>
 <Button className="generic-btn-activities credential-btn" variant="outline-primary">Evaluate your skills</Button>
 <i className="bi bi-plus-lg mr-2"></i>

@@ -1,5 +1,4 @@
 import { Col, Row } from 'react-bootstrap'
-import InterestCardSec from './InterestCardSec'
 import InterestProfiles from './InterestProfiles'
 import { useState } from 'react'
 
@@ -8,34 +7,34 @@ export default function InterestCard(props) {
   const [section, setSection] = useState(1)
   return( 
     <>
-  <div className="card-section p-4 mb-3">
+  <div className="card-section p-4 mb-3" style={{minHeight: '220px'}}>
 
-<h4> Interest</h4>
-<div style={{borderBottom: '1px solid gray'}}>
-<Row style={{width:'60%'}}>
+<h4 className='mb-3'> Interest</h4>
+<div className='d-flex align-items-center' style={{borderBottom: '1px solid gray', whiteSpace:'nowrap', cursor:'pointer'}}>
+<Row style={{width:'70%'}}>
 {section=== 1 ?
-  <Col md={4} style={{borderBottom: '2px solid green'}} onClick={()=> setSection(1)}>
+  <Col md={3} style={{  cursor:'pointer'}} onClick={()=> setSection(1)}>
   <h5 className='interest-titles' style={{color: 'green'}}>Influencer</h5>
   
-  </Col>: <Col md={4}  onClick={()=> setSection(1)}>
+  </Col>: <Col md={3}  onClick={()=> setSection(1)}>
   <h5 className='interest-titles' style={{color: 'gray'}}>Influencer</h5>
   
   </Col>
 }
   {section=== 2 ?
-  <Col md={4} style={{borderBottom: '2px solid green'}} onClick={()=> setSection(2)}>
-  <h5 className='interest-titles' style={{color: 'green'}}>Company</h5>
+  <Col md={3} style={{cursor:'pointer'}} onClick={()=> setSection(2)}>
+  <h5 className='interest-titles' style={{color: 'green', cursor:'pointer'}}>Company</h5>
   
-  </Col>: <Col md={4}  onClick={()=> setSection(2)}>
+  </Col>: <Col md={3}  onClick={()=> setSection(2)}>
   <h5 className='interest-titles' style={{color: 'gray'}}>Company</h5>
   
   </Col>
 }
   {section=== 3 ?
-  <Col md={4} style={{borderBottom: '2px solid green'}} onClick={()=> setSection(3)}>
-  <h5 className='interest-titles' style={{color: 'green'}}>Schools and university</h5>
+  <Col md={3} style={{ cursor:'pointer'}} onClick={()=> setSection(3)}>
+  <h5 className='interest-titles' style={{color: 'green', cursor:'pointer'}}>Schools and university</h5>
   
-  </Col>: <Col md={4}  onClick={()=> setSection(3)}>
+  </Col>: <Col md={3}  onClick={()=> setSection(3)}>
   <h5 className='interest-titles' style={{color: 'gray'}}>Schools and university</h5>
   
   </Col>
@@ -45,14 +44,14 @@ export default function InterestCard(props) {
 
   
 {section===1 ?
-  <Row>
+  <Row className='pt-2'>
   <Col md={6}>
 <InterestProfiles
         img={
           "https://s8d2r8j5.rocketcdn.me/wp-content/uploads/2019/11/1_VJQhanK3SjxTPT4Ifd0MSg.jpeg"
         }
         name={"Steve Jobs"}
-        description={"Aplle Inc. CEO"}
+        description={"Apple Inc. CEO"}
       />
       </Col>
       <Col md={6}>
@@ -66,7 +65,7 @@ export default function InterestCard(props) {
       </Col>
 </Row>: <div></div>}
 {section===2 ?
-  <Row>
+  <Row className='pt-2'>
   <Col md={6}>
 <InterestProfiles
         img={
@@ -87,7 +86,7 @@ export default function InterestCard(props) {
 </Row>: <div></div>}
 
 {section===3 ?
-  <Row>
+  <Row className='pt-2'>
   <Col md={6}>
 <InterestProfiles
          img={

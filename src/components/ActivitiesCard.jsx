@@ -7,7 +7,7 @@ export default function ActivitiesCard(props) {
   <div className="card-section p-4 mb-3">
     <div className="d-flex justify-content-between">
 <div>
-<h4> Activities</h4>
+<h4 className='mb-3'> Activities</h4>
 <p className="link">500+ follower</p>
 </div>
 <Button className="generic-btn-activities credential-btn" variant="outline-primary">Create a post</Button>

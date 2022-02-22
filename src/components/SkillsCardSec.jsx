@@ -4,10 +4,10 @@ const SkillsCardSec = (props) => {
 
         <div className='d-flex' style={props.border}>
             <div className="mb-2 mr-1">
-            <h5>{props.titleText}</h5>
+            <h5 className='font-16'>{props.titleText}</h5>
             </div>
 
-              <span> • {props.description}</span> 
+              <span className="font-14"> • {props.description}</span> 
         </div>
 
     )

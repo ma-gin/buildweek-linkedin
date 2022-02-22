@@ -7,7 +7,7 @@ export default function LicensesCard(props) {
 
 
 <div className='d-flex justify-content-between'>
-<h4> Licenses</h4>
+<h4 className='mb-3'> Licenses</h4>
 <div>
 <i className="bi bi-plus-lg mr-2"></i>
 <i className="bi bi-pencil"></i>

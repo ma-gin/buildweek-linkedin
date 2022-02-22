@@ -35,7 +35,7 @@ export default function ProfileMain() {
         alt="cover"
       />
       <img className="profile-img" src={user.image} alt="profile" />
-      <i className="bi bi-pen pen-lg"></i>
+      <i className="bi bi-pencil pen-lg"></i>
       <div className="profile-card m-4">
         <Row>
           <Col xs={6}>
