@@ -12,7 +12,6 @@ const ExperienceCardSec = (props) => {
             <span className="d-block font-12" >{props.location}</span>
             </div>
         </div>
-
     )
 }
 

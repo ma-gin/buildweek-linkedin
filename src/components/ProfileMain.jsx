@@ -18,6 +18,7 @@ export default function ProfileMain() {
         }
       )
       const data = await response.json()
+      console.log(data)
       setUser(data)
     } catch (error) {
       console.log(error)

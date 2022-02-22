@@ -1,6 +1,33 @@
 import ExperienceCardSec from "./ExperienceCardSec"
+import { useEffect, useState } from "react"
 
 export default function ExperienceCard(props) {
+
+  const [user, setUser] = useState([])
+  
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+
+  const fetchData = async () => {
+    // const dataFetch = "https://striveschool-api.herokuapp.com/api/profile/" + props.id + "/experiences"
+    try {
+      const response = await fetch( "https://striveschool-api.herokuapp.com/api/profile/62141c010448b4001511688d/experiences",
+        {
+          headers: {
+            Authorization:
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjE0MWMwMTA0NDhiNDAwMTUxMTY4OGQiLCJpYXQiOjE2NDU0ODUwNTcsImV4cCI6MTY0NjY5NDY1N30.RpYP2LhIfMwWh9okgKoO9hO9xHHxMIrpOw6PlnVfviI",
+          },
+        }
+      )
+      const data = await response.json()
+      setUser(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return( 
     <>
   <div className="card-section p-4 mb-3">
@@ -13,10 +40,9 @@ export default function ExperienceCard(props) {
 <i className="bi bi-pencil"></i>
 </div>
 </div>
-<ExperienceCardSec image={'http://www.50epiu.it/wp-content/uploads/2015/12/placeholder.gif'} titleText={'Full Stack Developer'} description={'Get known, put your content on your profile.'} border={{borderBottom: '1px solid gray', marginBottom:'10px'}} period={'July 2019 - October 2019 • 4 months'} location={'Barcelona'}/>
-<ExperienceCardSec image={'http://www.50epiu.it/wp-content/uploads/2015/12/placeholder.gif'} titleText={'My network'} description={'Save and edit your network.'} border={{borderBottom: '1px solid gray', marginBottom:'10px'}} period={'July 2019 - October 2019 • 4 months'} location={'Barcelona'}/>
-<ExperienceCardSec image={'http://www.50epiu.it/wp-content/uploads/2015/12/placeholder.gif'} titleText={'Activities'} description={'Find the shared post from your network.'} period={'July 2019 - October 2019 • 4 months'} location={'Barcelona'}/>
-
+{
+user.map( userex => (<ExperienceCardSec image={'http://www.50epiu.it/wp-content/uploads/2015/12/placeholder.gif'} titleText={userex.role} description={userex.description} border={{borderBottom: '1px solid gray', marginBottom:'10px'}} period={userex.startDate + ' - ' + userex.endDate} location={userex.area} key={userex._id}/>))
+}
 </div>
 </>
   )
