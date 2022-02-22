@@ -12,7 +12,7 @@ export default function SideProfile(props) {
           {props.description}
         </div>
         <Button
-          className="mt-1 generic-btn side-btn font-weight-bold"
+          className="mt-1 generic-btn side-btn font-weight-bold font-12"
           variant="outline-secondary">
           Message
         </Button>
