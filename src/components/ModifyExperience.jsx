@@ -35,7 +35,7 @@ const ModifyExperience = (props) => {
         }
       );
       if (response.ok){
-        console.log('Experience modified successfully')
+        alert('Experience modified successfully')
       }
     } catch (error) {
       console.log(error);
