@@ -1,12 +1,12 @@
-import ExperienceCardSec from "./ExperienceCardSec";
-import { useEffect, useState } from "react";
-import AddExperience from "./AddExperience";
-import ModifyExperience from './ModifyExperience'
+import ExperienceCardSec from "./ExperienceCardSec"
+import { useEffect, useState } from "react"
+import AddExperience from "./AddExperience"
+import ModifyExperience from "./ModifyExperience"
 
 export default function ExperienceCard(props) {
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState([])
 
-  const [selected, setSelected] = useState(false);
+  const [selected, setSelected] = useState(false)
 
   const [edit, setEdit] = useState(false)
 
@@ -20,11 +20,11 @@ export default function ExperienceCard(props) {
     endDate: undefined,
     description: undefined,
     area: undefined,
-  });
+  })
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    fetchData()
+  }, [])
 
   const fetchData = async () => {
     // const dataFetch = "https://striveschool-api.herokuapp.com/api/profile/" + props.id + "/experiences"
@@ -37,16 +37,16 @@ export default function ExperienceCard(props) {
               "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjE0MWMwMTA0NDhiNDAwMTUxMTY4OGQiLCJpYXQiOjE2NDU0ODUwNTcsImV4cCI6MTY0NjY5NDY1N30.RpYP2LhIfMwWh9okgKoO9hO9xHHxMIrpOw6PlnVfviI",
           },
         }
-      );
-      const data = await response.json();
+      )
+      const data = await response.json()
       console.log(data)
-      setUser(data);
+      setUser(data)
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
-  };
+  }
 
-  const editSelect= () =>{
+  const editSelect = () => {
     setEdit(!edit)
   }
 
@@ -59,13 +59,15 @@ export default function ExperienceCard(props) {
   }
 
   const changeExper = (value1, value2, value3, value4, value5, value6) => {
-    setExperience({  role: value1,
+    setExperience({
+      role: value1,
       company: value2,
-      startDate:value3,
+      startDate: value3,
       endDate: value4,
       description: value5,
       area: value6,
-    value:7})
+      value: 7,
+    })
   }
 
   return (
@@ -76,15 +78,17 @@ export default function ExperienceCard(props) {
           <div>
             <i
               className="bi bi-plus-lg mr-2"
-              style={{ cursor: 'pointer'}}
+              style={{ cursor: "pointer" }}
               onClick={() => {
-                setSelected(!selected);
-              }}
-            ></i>
-            <i className="bi bi-pencil" style={{ cursor: 'pointer'}} onClick={()=> editSelect()}></i>
+                setSelected(!selected)
+              }}></i>
+            <i
+              className="bi bi-pencil"
+              style={{ cursor: "pointer" }}
+              onClick={() => editSelect()}></i>
           </div>
         </div>
-        {user.map((userex) => ( 
+        {user.map((userex) => (
           <ExperienceCardSec
             image={
               "http://www.50epiu.it/wp-content/uploads/2015/12/placeholder.gif"
@@ -105,16 +109,19 @@ export default function ExperienceCard(props) {
             chanId={changeId}
           />
         ))}
-        {selected === true && <AddExperience />}
-        {toggle === true && <ModifyExperience    role={experience.role}
+        {selected === true && <AddExperience fetch={fetchData} />}
+        {toggle === true && (
+          <ModifyExperience
+            role={experience.role}
             description={experience.description}
             location={experience.area}
             company={experience.company}
             start={experience.startDate}
             end={experience.endDate}
-            thisId={id}/>}
-            
+            thisId={id}
+          />
+        )}
       </div>
     </>
-  );
+  )
 }
