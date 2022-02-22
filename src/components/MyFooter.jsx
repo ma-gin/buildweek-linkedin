@@ -1,5 +1,5 @@
 /* change font size */
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Dropdown } from "react-bootstrap";
 const MyFooter = function () {
   return (
     <>
@@ -20,13 +20,10 @@ const MyFooter = function () {
             <p> Careers </p>
             <p>Ad Choices</p>
             <p>Mobile</p>
-            <p>Careers</p>
           </Col>
           <Col xs={6} md={2}>
             <p>Talent Solutions</p>
             <p> Marketing Solutons </p>
-            <p>Advertising </p>
-            <p>Community Guidelines</p>
             <p>Advertising</p>
             <p>Small Business</p>
           </Col>
@@ -38,7 +35,23 @@ const MyFooter = function () {
               <i class="bi bi-gear-fill"></i> Manage
             </Row>
           </Col>
-          <Col md={2}>dropdown</Col>
+          <Col md={2}>
+            {/* add border */}
+            <Dropdown>
+              Select Language
+              <Dropdown.Toggle variant="transparent" id="dropdown-basic">
+                have to be props
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">
+                  English(English)
+                </Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Italian</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Spanish</Dropdown.Item>
+                <Dropdown.Item href="#/action-4">Polish</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </Col>
         </Row>
       </Container>
     </>
