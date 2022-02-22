@@ -7,6 +7,8 @@ export default function ExperienceCard(props) {
 
   const [selected, setSelected] = useState(false);
 
+  const [edit, setEdit] = useState(false)
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -24,11 +26,16 @@ export default function ExperienceCard(props) {
         }
       );
       const data = await response.json();
+      console.log(data)
       setUser(data);
     } catch (error) {
       console.log(error);
     }
   };
+
+  const editSelect= () =>{
+    setEdit(!edit)
+  }
 
   return (
     <>
@@ -38,14 +45,15 @@ export default function ExperienceCard(props) {
           <div>
             <i
               className="bi bi-plus-lg mr-2"
+              style={{ cursor: 'pointer'}}
               onClick={() => {
                 setSelected(!selected);
               }}
             ></i>
-            <i className="bi bi-pencil"></i>
+            <i className="bi bi-pencil" style={{ cursor: 'pointer'}} onClick={()=> editSelect()}></i>
           </div>
         </div>
-        {user.map((userex) => (
+        {user.map((userex) => ( 
           <ExperienceCardSec
             image={
               "http://www.50epiu.it/wp-content/uploads/2015/12/placeholder.gif"
@@ -56,6 +64,8 @@ export default function ExperienceCard(props) {
             period={userex.startDate + " - " + userex.endDate}
             location={userex.area}
             key={userex._id}
+            experienceId={userex._id}
+            selected={edit}
           />
         ))}
         {selected === true && <AddExperience />}
