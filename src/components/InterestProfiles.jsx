@@ -7,7 +7,7 @@ export default function InterestProfiles(props) {
       <div className="d-flex flex-column">
         <div className="d-flex">
           <div className="font-weight-bold mr-2">{props.name}</div>
-          <i class="bi bi-diamond-fill"></i>
+          <i className="bi bi-diamond-fill"></i>
         </div>
         <span>{props.description}</span>
         <span>1.697.452 follower</span>

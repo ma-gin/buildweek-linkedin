@@ -29,10 +29,10 @@ const MyFooter = function () {
           </Col>
           <Col md={2}>
             <Row>
-              <i class="bi bi-question-circle-fill"></i>question
+              <i className="bi bi-question-circle-fill"></i>question
             </Row>
             <Row>
-              <i class="bi bi-gear-fill"></i> Manage
+              <i className="bi bi-gear-fill"></i> Manage
             </Row>
           </Col>
           <Col md={2}>

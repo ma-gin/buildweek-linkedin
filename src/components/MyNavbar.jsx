@@ -3,7 +3,7 @@ const MyNavbar = function (props) {
   return (
     <Navbar bg="light" expand="lg" className="mb-4">
       <Navbar.Brand href="#home">
-        <i class="bi bi-linkedin"></i>
+        <i className="bi bi-linkedin"></i>
       </Navbar.Brand>
       <Form inline>
         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -12,19 +12,19 @@ const MyNavbar = function (props) {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto  ">
           <Nav.Link href="#home">
-            <i class="bi bi-house-door-fill"></i>Home
+            <i className="bi bi-house-door-fill"></i>Home
           </Nav.Link>
           <Nav.Link href="#myNetwork">
-            <i class="bi bi-people-fill"></i>My NetWork
+            <i className="bi bi-people-fill"></i>My NetWork
           </Nav.Link>
           <Nav.Link href="#jobs">
-            <i class="bi bi-briefcase-fill"></i>Jobs
+            <i className="bi bi-briefcase-fill"></i>Jobs
           </Nav.Link>
           <Nav.Link href="#messaging">
-            <i class="bi bi-chat-dots-fill"></i>Messaging
+            <i className="bi bi-chat-dots-fill"></i>Messaging
           </Nav.Link>
           <Nav.Link href="#notifications">
-            <i class="bi bi-bell-fill"></i>Notifications
+            <i className="bi bi-bell-fill"></i>Notifications
           </Nav.Link>
 
           <NavDropdown title="Me" id="profile-nav-dropdown">

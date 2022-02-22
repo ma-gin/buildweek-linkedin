@@ -8,7 +8,7 @@ export default function ResourcesCard(props) {
 
 <h4> Resources</h4>
 <div className='d-flex'>
-<i class="bi bi-eye-fill mr-2"></i>
+<i className="bi bi-eye-fill mr-2"></i>
 <p>Only you</p>
 </div>
 <ResourcesCardSec icons={'bi bi-rss mr-2'} titleText={'Content creator mode'} description={'Get known, put your content on your profile.'} border={{borderBottom: '1px solid gray', marginBottom:'10px'}}/>

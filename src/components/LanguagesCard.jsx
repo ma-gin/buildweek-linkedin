@@ -10,8 +10,8 @@ export default function LanguagesCard(props) {
 <div className='d-flex justify-content-between'>
 <h4> Languages</h4>
 <div>
-<i class="bi bi-plus-lg mr-2"></i>
-<i class="bi bi-pencil"></i>
+<i className="bi bi-plus-lg mr-2"></i>
+<i className="bi bi-pencil"></i>
 </div>
 </div>
 <LanguagesCardSec titleText={'Spanish'} description={'Mother tongue'} border={{borderBottom: '1px solid gray', marginBottom:'10px'}}/>

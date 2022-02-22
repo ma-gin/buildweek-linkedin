@@ -8,7 +8,7 @@ export default function AnalysisCard(props) {
 
 <h4> Analysis</h4>
 <div className='d-flex'>
-<i class="bi bi-eye-fill mr-2"></i>
+<i className="bi bi-eye-fill mr-2"></i>
 <p>Only you</p>
 </div>
 <Row>

@@ -12,8 +12,8 @@ export default function SkillsCard(props) {
 <h4> Skills</h4>
 <div>
 <Button className="generic-btn-activities credential-btn" variant="outline-primary">Evaluate your skills</Button>
-<i class="bi bi-plus-lg mr-2"></i>
-<i class="bi bi-pencil"></i>
+<i className="bi bi-plus-lg mr-2"></i>
+<i className="bi bi-pencil"></i>
 </div>
 </div>
 <SkillsCardSec titleText={'Full Stack Developer'} description={'3'} border={{borderBottom: '1px solid gray', marginBottom:'10px'}}/>
