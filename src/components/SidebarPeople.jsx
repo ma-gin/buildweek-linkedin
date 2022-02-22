@@ -55,22 +55,22 @@ export default function SidebarPeople(props) {
         <>
           <SideProfile
             img={users[0].image}
-            name={users[0].name + users[0].surname}
+            name={users[0].name + ' ' + users[0].surname}
             description={users[0].bio}
           />
           <SideProfile
             img={users[1].image}
-            name={users[1].name + users[1].surname}
+            name={users[1].name + ' ' + users[1].surname}
             description={users[1].bio}
           />
           <SideProfile
             img={users[2].image}
-            name={users[2].name + users[2].surname}
+            name={users[2].name + ' ' + users[2].surname}
             description={users[2].bio}
           />
           <SideProfile
             img={users[3].image}
-            name={users[3].name + users[3].surname}
+            name={users[3].name + ' ' + users[3].surname}
             description={users[3].bio}
           />
         </>

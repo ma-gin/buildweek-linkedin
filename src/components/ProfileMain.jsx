@@ -39,7 +39,7 @@ export default function ProfileMain() {
       <div className="profile-card m-4">
         <Row>
           <Col xs={6}>
-            <h4 className="font-weight-bold">{`${user.name} + ${user.surname}`}</h4>
+            <h4 className="font-weight-bold">{`${user.name} ${user.surname}`}</h4>
             <h6>{user.title}</h6>
             <div className="flexbox">
               <h6>{user.area}</h6>
