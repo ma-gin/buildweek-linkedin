@@ -25,7 +25,7 @@ const ModifyExperience = (props) => {
       const response = await fetch(
         "https://striveschool-api.herokuapp.com/api/profile/62141c010448b4001511688d/experiences/",
         {
-          method: "Put",
+          method: "PUT",
           body: JSON.stringify(experience),
           headers: {
             Authorization:
@@ -54,33 +54,33 @@ const ModifyExperience = (props) => {
           type="text"
           placeholder="Enter role"
           onChange={(e) => grabValue("role", e.target.value)}
-          value={props.role}
+          defaultValue={props.role}
         />
       </Form.Group>
 
       <Form.Group controlId="formBasicCompany">
         <Form.Label>Company</Form.Label>
-        <Form.Control type="text" placeholder="Enter Company" value={props.company} onChange={(e) => grabValue("company", e.target.value)}/>
+        <Form.Control type="text" placeholder="Enter Company" defaultValue={props.company} onChange={(e) => grabValue("company", e.target.value)}/>
       </Form.Group>
 
       <Form.Group controlId="formBasicStartDate">
         <Form.Label>Start Date</Form.Label>
-        <Form.Control type="text" placeholder="Enter Start Date"  value={props.start} onChange={(e) => grabValue("startDate", e.target.value)} />
+        <Form.Control type="text" placeholder="Enter Start Date"  defaultValue={props.start} onChange={(e) => grabValue("startDate", e.target.value)} />
       </Form.Group>
 
       <Form.Group controlId="formBasicEndDate">
         <Form.Label>End Date</Form.Label>
-        <Form.Control type="text" placeholder="Enter End Date" value={props.end} onChange={(e) => grabValue("endDate", e.target.value)} />
+        <Form.Control type="text" placeholder="Enter End Date" defaultValue={props.end} onChange={(e) => grabValue("endDate", e.target.value)} />
       </Form.Group>
 
       <Form.Group controlId="formBasicDescription">
         <Form.Label>Description</Form.Label>
-        <Form.Control type="text" placeholder="Enter Description"  value={props.description} onChange={(e) => grabValue("description", e.target.value)}/>
+        <Form.Control type="text" placeholder="Enter Description"  defaultValue={props.description} onChange={(e) => grabValue("description", e.target.value)}/>
       </Form.Group>
 
       <Form.Group controlId="formBasicCountry">
         <Form.Label>Country</Form.Label>
-        <Form.Control type="text" placeholder="Enter Country" value={props.location}  onChange={(e) => grabValue("area", e.target.value)}/>
+        <Form.Control type="text" placeholder="Enter Country" defaultValue={props.location}  onChange={(e) => grabValue("area", e.target.value)}/>
       </Form.Group>
 
       <Button variant="primary" type="submit">
