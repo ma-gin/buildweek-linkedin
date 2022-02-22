@@ -7,7 +7,7 @@ export default function InterestCard(props) {
   const [section, setSection] = useState(1)
   return( 
     <>
-  <div className="card-section p-4 mb-3" style={{minHeight: '220px'}}>
+  <div className="card-section p-4 mb-3" style={{minHeight: '230px'}}>
 
 <h4 className='mb-3'> Interest</h4>
 <div className='d-flex align-items-center' style={{borderBottom: '1px solid gray', whiteSpace:'nowrap', cursor:'pointer'}}>
