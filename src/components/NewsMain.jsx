@@ -1,4 +1,5 @@
 import { Row, Col } from "react-bootstrap"
+import GetAPost from "./GetAPost"
 
 const NewsMain = () => {
   return (
@@ -8,7 +9,7 @@ const NewsMain = () => {
 
         </Col>
         <Col md={6}>
-     
+     <GetAPost/>
         </Col>
         <Col md={4}>
 

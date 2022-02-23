@@ -19,8 +19,6 @@ const MainSection = () => {
     <div className="container padding-sec">
       <Row className="m-auto">
         <Col md={8}>
-          <GetAPost />
-
           <ProfileMain />
           <AnalysisCard />
           <ResourcesCard />

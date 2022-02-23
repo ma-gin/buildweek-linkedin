@@ -7,11 +7,9 @@ const GetAPost = () => {
   useEffect(() => {
     getFetch();
     console.log("fuck silvio" + posts);
-  });
+  }, [!posts]);
 
-  const postsF = useCallback(() => {
-    get;
-  });
+
 
   const getFetch = async () => {
     try {
@@ -34,9 +32,8 @@ const GetAPost = () => {
   };
   return (
     <>
-      {posts.map((post) => {
-        <SinglePost username={post.username} text={post.text} />;
-      })}
+      {posts && posts.filter((post,idx)=> idx < 10).map((post) =>  <SinglePost username={post.username} text={post.text} />
+      )}
     </>
   );
 };
