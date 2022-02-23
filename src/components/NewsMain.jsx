@@ -2,7 +2,7 @@ import { Row, Col } from "react-bootstrap"
 
 const NewsMain = () => {
   return (
-    <div className="container">
+    <div className="container padding-sec">
       <Row className="m-auto">
       <Col md={2}>
 

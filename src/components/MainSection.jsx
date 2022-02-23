@@ -15,7 +15,7 @@ import SkillsCard from "./SkillsCard"
 
 const MainSection = () => {
   return (
-    <div className="container">
+    <div className="container padding-sec">
       <Row className="m-auto">
         <Col md={8}>
           <ProfileMain />
