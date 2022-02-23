@@ -1,6 +1,3 @@
-.flexbox {
-  display: flex;
-}
 .profile-main {
   overflow: hidden;
   position: relative;
@@ -91,7 +88,6 @@
   line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-
 
 .text-one {
   overflow: hidden;

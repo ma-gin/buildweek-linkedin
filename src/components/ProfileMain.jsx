@@ -41,22 +41,14 @@ export default function ProfileMain() {
           <Col xs={6}>
             <h4 className="font-weight-bold">{`${user.name} ${user.surname}`}</h4>
             <h6>{user.title}</h6>
-            <div className="flexbox">
+            <div className="d-flex">
               <h6>{user.area}</h6>
-              <span className="mx-2">·</span>
-              <div className="link">Contact Info</div>
+              <span className="mx-2"></span>
+              <div className="link font-13">Contact Info</div>
             </div>
-            <div className="link">500+ connections</div>
+            <div className="link font-13">500+ connections</div>
           </Col>
           <Col xs={6}>
-            <div className="d-flex align-items-center mb-1">
-              <img
-                className="profile-img-ed mr-2"
-                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcampuspress.yale.edu%2Fbulldogcubeclub%2Ffiles%2F2015%2F10%2FyaleNCAAlogoCropped-1mwd2sw.jpg&f=1&nofb=1"
-                alt="strive"
-              />
-              <h6 className="smaller-font">Yale University</h6>
-            </div>
             <div className="d-flex align-items-center">
               <img
                 className="profile-img-ed mr-2"

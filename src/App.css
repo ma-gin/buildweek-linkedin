@@ -160,7 +160,6 @@ footer .bi-linkedin {
 
 .link {
   color: var(--link-blue);
-  font-size: 14px;
   font-weight: bold;
 }
 
@@ -232,22 +231,22 @@ footer .bi-linkedin {
   font-size: 11px;
 }
 
-.text-black{
-  color: var(--text-black)!important;
+.text-black {
+  color: var(--text-black) !important;
 }
 
-.text-green{
-  color: rgb(139, 209, 33)!important;
+.text-green {
+  color: rgb(139, 209, 33) !important;
 }
 
-.text-orange{
-  color: rgb(236, 154, 0)!important;
+.text-orange {
+  color: rgb(236, 154, 0) !important;
 }
 
-.text-pink{
-  color: rgb(235, 168, 179)!important;
+.text-pink {
+  color: rgb(235, 168, 179) !important;
 }
 
-.text-lightBlue{
-  color: rgb(1, 196, 196)!important;
+.text-lightBlue {
+  color: rgb(1, 196, 196) !important;
 }
