@@ -1,5 +1,4 @@
 import { Row, Col } from "react-bootstrap"
-import GetAPost from "./GetAPost"
 
 const NewsMain = () => {
   return (
