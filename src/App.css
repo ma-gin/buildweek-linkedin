@@ -93,6 +93,34 @@ h6 {
 }
 /* --navbar end--- */
 
+/* Footer Start */
+footer {
+  font-size: 12px;
+}
+.footh6 {
+  font-size: 14px;
+}
+.linkedinIcon {
+  color: var(--link-blue);
+  font-weight: 700;
+  font-size: 17px;
+  padding-right: 0;
+  margin-right: 0;
+}
+footer .bi-linkedin {
+  font-size: 17px;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+#dropdown-basic {
+  background: white;
+  border: 1px solid black;
+  padding-right: 100px;
+}
+
+/* Footer end */
+
 .card-section {
   display: flex;
   flex-direction: column;
