@@ -1,16 +1,23 @@
-import "./App.css";
-import MyNavbar from "./components/MyNavbar";
-import MainSection from "./components/MainSection";
-import MyFooter from "./components/MyFooter";
+import "./App.css"
+import MyNavbar from "./components/MyNavbar"
+import MainSection from "./components/MainSection"
+import MyFooter from "./components/MyFooter"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+// import NewsMain from "./NewsMain"
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
       <MyNavbar />
       <MainSection />
       <MyFooter />
-    </div>
-  );
+
+      <Routes>
+        {/* <Route path="/" element={<NewsMain />} /> */}
+        <Route path="/profile" element={<MainSection />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
