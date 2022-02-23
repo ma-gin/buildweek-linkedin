@@ -235,3 +235,19 @@ footer .bi-linkedin {
 .text-black{
   color: var(--text-black)!important;
 }
+
+.text-green{
+  color: greenyellow!important;
+}
+
+.text-orange{
+  color: orange!important;
+}
+
+.text-pink{
+  color: pink!important;
+}
+
+.text-lightBlue{
+  color: aqua!important;
+}
