@@ -5,6 +5,8 @@ const SinglePost = (props) => {
 
   const [clicked, setClicked] = useState(false)
 
+  const [dots, setDots] = useState(false)
+
   const [post, setPost] = useState({
     text: undefined
   })
@@ -67,18 +69,23 @@ const SinglePost = (props) => {
     <div className="card-section p-4 mb-3">
       <div className="d-flex justify-content-between">
       <h4> {props.username}</h4>
-      <div>
+      <i class="bi bi-three-dots d-block"
+        style={{ cursor: "pointer" }}
+        onClick={()=>{ setDots(!dots); setClicked(false)}}></i>
+           </div>
+           <div className="d-flex justify-content-between">
+      <span className="mb-4">{props.text}</span>
+      { dots &&<div className="d-flex"> 
       <i
-            className="bi bi-pencil mr-2"
+            className="bi bi-pencil mr-2 d-block"
             style={{ cursor: "pointer" }}
             onClick={()=> setClicked(!clicked)}></i>
       <i
-            className="bi bi-trash3"
+            className="bi bi-trash3 d-block"
             style={{ color: "red", cursor: "pointer" }}
            onClick={()=> deleteData()}></i>
+           </div>}
            </div>
-           </div>
-      <span className="mb-4">{props.text}</span>
       {clicked &&
       <Form style={{borderTop: '1px solid gray', paddingTop: '20px'}} onSubmit={(event) => handleSubmit(event)}>
       <Form.Group controlId="formBasicText">
