@@ -12,6 +12,7 @@ import ResourcesCard from "./Resourcescard"
 import SidebarTop from "./SidebarTop"
 import SidebarPeople from "./SidebarPeople"
 import SkillsCard from "./SkillsCard"
+import MyFooter from "./MyFooter"
 
 const MainSection = () => {
   return (
@@ -26,9 +27,9 @@ const MainSection = () => {
           <ExperienceCard />
           <EducationCard />
           <LicensesCard />
-          <SkillsCard/>
-          <LanguagesCard/>
-          <InterestCard/>
+          <SkillsCard />
+          <LanguagesCard />
+          <InterestCard />
         </Col>
         <Col md={4}>
           <SidebarTop />
@@ -36,6 +37,7 @@ const MainSection = () => {
           <SidebarPeople sectionTitle={"People you may know"} />
         </Col>
       </Row>
+      <MyFooter />
     </div>
   )
 }
