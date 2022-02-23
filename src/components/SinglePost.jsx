@@ -68,13 +68,13 @@ const SinglePost = (props) => {
   return (
     <div className="card-section p-4 mb-3">
       <div className="d-flex justify-content-between">
-      <h4> {props.username}</h4>
+      <h6> {props.username}</h6>
       <i class="bi bi-three-dots d-block"
         style={{ cursor: "pointer" }}
         onClick={()=>{ setDots(!dots); setClicked(false)}}></i>
            </div>
            <div className="d-flex justify-content-between">
-      <span className="mb-4">{props.text}</span>
+      <span className="mb-4 font-14">{props.text}</span>
       { dots &&<div className="d-flex"> 
       <i
             className="bi bi-pencil mr-2 d-block"
