@@ -78,6 +78,9 @@ h6 {
 
 .navbar {
   font-size: 13px;
+  padding: 0 !important;
+  padding-left: 15px !important;
+  padding-right: 20px !important;
 }
 
 .nav-link {
@@ -125,4 +128,10 @@ h6 {
 
 .interest-titles {
   font-size: 12px;
+}
+
+.promotional{
+  margin-top: auto!important;
+  margin-bottom: auto!important;
+  color: rgb(163, 53, 13);
 }
