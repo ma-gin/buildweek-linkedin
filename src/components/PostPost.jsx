@@ -30,7 +30,7 @@ export default function PostPost() {
   }
 
   return (
-    <div className="card-section p-3">
+    <div className="card-section p-4 mb-3">
       <div className="d-flex align-items-center">
         <img
           className="post-img m-3"

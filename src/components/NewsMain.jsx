@@ -1,6 +1,7 @@
 import { Row, Col } from "react-bootstrap"
 import HomeSidebarLeft from "./HomeSidebarLeft"
 import PostPost from "./PostPost"
+import GetAPost from "./GetAPost"
 
 const NewsMain = () => {
   return (
@@ -10,9 +11,8 @@ const NewsMain = () => {
           <HomeSidebarLeft />
         </Col>
         <Col md={6}>
-
           <PostPost />
-
+    <GetAPost/>
         </Col>
         <Col md={4}></Col>
       </Row>

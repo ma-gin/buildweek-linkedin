@@ -6,7 +6,6 @@ const GetAPost = () => {
 
   useEffect(() => {
     getFetch();
-    console.log("fuck silvio" + posts);
   }, [!posts]);
 
 
@@ -25,14 +24,16 @@ const GetAPost = () => {
 
       let data = await response.json();
       setPosts(data);
-      console.log(data);
     } catch (error) {
       console.log(error);
     }
   };
   return (
     <>
-      {posts && posts.filter((post,idx)=> idx < 10).map((post) =>  <SinglePost username={post.username} text={post.text} />
+    {posts === undefined && <div className="spinner-border text-primary m-auto" role="status">
+  <span className="sr-only">Loading...</span>
+</div>}
+      {posts && posts.filter((post,idx)=>idx > 50 && idx < 70).map((post) =>  <SinglePost username={post.username} text={post.text} key={post._id}/>
       )}
     </>
   );
