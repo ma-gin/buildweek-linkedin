@@ -1,5 +1,5 @@
 /* change font size */
-import { Container, Row, Col, Dropdown } from "react-bootstrap";
+import { Container, Row, Col, Dropdown } from "react-bootstrap"
 const MyFooter = function () {
   return (
     <>
@@ -40,7 +40,7 @@ const MyFooter = function () {
             <Dropdown>
               Select Language
               <Dropdown.Toggle variant="transparent" id="dropdown-basic">
-                English(English)
+                English (English)
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 <Dropdown.Item href="#/action-1">
@@ -49,13 +49,14 @@ const MyFooter = function () {
                 <Dropdown.Item href="#/action-2">Italian</Dropdown.Item>
                 <Dropdown.Item href="#/action-3">Spanish</Dropdown.Item>
                 <Dropdown.Item href="#/action-4">Polish</Dropdown.Item>
+                <Dropdown.Item href="#/action-4">German</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </Col>
         </Row>
       </Container>
     </>
-  );
-};
+  )
+}
 
-export default MyFooter;
+export default MyFooter

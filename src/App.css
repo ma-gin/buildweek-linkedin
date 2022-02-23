@@ -107,6 +107,8 @@ h6 {
   padding-bottom: 2px !important;
   border-radius: 20px !important;
   margin-right: 8px;
+  font-size: 14px !important;
+  max-height: 34px;
 }
 
 .link {
@@ -119,14 +121,6 @@ h6 {
   width: 10%;
   height: 40%;
   margin-right: 10px;
-}
-
-.generic-btn-activities {
-  padding-top: 2px !important;
-  padding-bottom: 2px !important;
-  border-radius: 20px !important;
-  margin-right: 8px;
-  max-height: 35px;
 }
 
 .interest-titles {
