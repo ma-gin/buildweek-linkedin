@@ -44,7 +44,7 @@ const MyFooter = function () {
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 <Dropdown.Item href="#/action-1">
-                  English(English)
+                  English (English)
                 </Dropdown.Item>
                 <Dropdown.Item href="#/action-2">Italian</Dropdown.Item>
                 <Dropdown.Item href="#/action-3">Spanish</Dropdown.Item>
