@@ -37,39 +37,26 @@ const MyNavbar = function (props) {
               <div className="mr-4 font-12">
                 <i className="bi bi-bell-fill"></i>Notifications
               </div>
-              <Link
-                to="/profile"
-                element={<MainSection />}
-                className="mr-4 font-12">
-                <i className="bi bi-person-circle"></i>
+              <div className="mr-4 font-12">
+                <Link to="/profile" element={<MainSection />}>
+                  <i className="bi bi-person-circle"></i>
+                </Link>
                 <NavDropdown title="Me" id="profile-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
-                    Something
-                  </NavDropdown.Item>
+                  <NavDropdown.Item>Action</NavDropdown.Item>
+                  <NavDropdown.Item>Another action</NavDropdown.Item>
+                  <NavDropdown.Item>Something</NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Separated link
-                  </NavDropdown.Item>
+                  <NavDropdown.Item>Separated link</NavDropdown.Item>
                 </NavDropdown>
-              </Link>
+              </div>
               <div className="b-left pl-4 font-12">
                 <i className="bi bi-grid-3x3-gap-fill"></i>{" "}
                 <NavDropdown title="Work" id="work-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
-                    Something
-                  </NavDropdown.Item>
+                  <NavDropdown.Item>Action</NavDropdown.Item>
+                  <NavDropdown.Item>Another action</NavDropdown.Item>
+                  <NavDropdown.Item>Something</NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Separated link
-                  </NavDropdown.Item>
+                  <NavDropdown.Item>Separated link</NavDropdown.Item>
                 </NavDropdown>
               </div>
               <div className="text-center  ml-5 font-12 promotional">
