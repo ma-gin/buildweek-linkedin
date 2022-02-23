@@ -143,6 +143,7 @@ footer .bi-linkedin {
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow: hidden;
   border-radius: 8px;
   background-color: var(--white-bg) !important;
   border: 1px solid hsla(0, 0%, 63%, 0.35);
@@ -192,4 +193,41 @@ footer .bi-linkedin {
   min-height: 50px;
   height: fit-content;
   border: 1px solid gray !important;
+}
+
+.home-connections {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+.home-connections p {
+  margin: 0;
+}
+
+.profile-img-home {
+  top: 40px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.home-cover-img {
+  object-fit: cover;
+  height: 70px;
+}
+.try-prem-home {
+  border-bottom: 1px solid gray;
+}
+.try-prem-home p {
+  margin: 0;
+}
+
+.font-11 {
+  font-size: 11px;
 }
