@@ -9,7 +9,7 @@ const NewsMain = () => {
 
         </Col>
         <Col md={6}>
-     <GetAPost/>
+ 
         </Col>
         <Col md={4}>
 
