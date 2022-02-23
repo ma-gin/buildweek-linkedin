@@ -22,7 +22,7 @@ const MyNavbar = function (props) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="text-muted">
-              <Link to="/" element={<NewsMain />} className="mr-4 font-12">
+              <Link to="/" element={<NewsMain />} className="mr-4 font-12 text-muted">
                 <i className="bi bi-house-door-fill"></i>Home
               </Link>
               <div className="mr-4 font-12">
@@ -38,7 +38,7 @@ const MyNavbar = function (props) {
                 <i className="bi bi-bell-fill"></i>Notifications
               </div>
               <div className="mr-4 font-12">
-                <Link to="/profile" element={<MainSection />}>
+                <Link to="/profile" element={<MainSection />} className='text-muted'>
                   <i className="bi bi-person-circle"></i>
                 </Link>
                 <NavDropdown title="Me" id="profile-nav-dropdown">
