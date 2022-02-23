@@ -17,7 +17,7 @@ const NewsMain = () => {
     <GetAPost/>
         </Col>
         <Col md={4}>
-        <LinkedNews title={'LinkedIn news'}/>        
+        <LinkedNews title={'LinkedIn News'}/>        
         </Col>
       </Row>
     </div>
