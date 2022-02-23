@@ -17,7 +17,12 @@ export default function SidebarPeople(props) {
           }
         )
         const data = await response.json()
-        setUsers(data)
+        if (response.ok) {
+          // console.log(data)
+          setUsers(data)
+          // let arr = [data]
+          // console.log("I am shuffled" + shuffle(arr))
+        }
       } catch (error) {
         console.log(error)
       }
@@ -25,10 +30,9 @@ export default function SidebarPeople(props) {
     fetchData()
   }, [])
 
-  // function trimShuffle(arr) {
-  //   console.log(arr[0])
-  //   console.log(arr[1])
+  // let test = [1, 2, 3, 4, 5]
 
+  // function shuffle(arr) {
   //   let currentIndex = arr.length,
   //     randomIndex
 
@@ -42,12 +46,13 @@ export default function SidebarPeople(props) {
   //   }
   //   return arr
   // }
+
+  // console.log(shuffle(test))
   // setTimeout(() => {
   //   console.log("shuffle")
-  //   trimShuffle(users)
+  //   shuffle(users)
+  // }, 1000)
 
-  //   // console.log(users)
-  // }, 500)
   return (
     <div className="card-section p-3 mb-3">
       <h6 className="people-title font-weight-bold">{props.sectionTitle}</h6>
