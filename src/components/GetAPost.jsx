@@ -33,7 +33,7 @@ const GetAPost = () => {
     {posts === undefined && <div className="spinner-border text-primary m-auto" role="status">
   <span className="sr-only">Loading...</span>
 </div>}
-      {posts && posts.filter((post,idx)=>idx > 50 && idx < 70).map((post) =>  <SinglePost username={post.username} text={post.text} key={post._id}/>
+      {posts && posts.filter((post,idx)=>idx > 50 && idx < 70).map((post) =>  <SinglePost username={post.username} text={post.text} key={post._id} unique={post._id}/>
       )}
     </>
   );
