@@ -69,7 +69,7 @@ const SinglePost = (props) => {
     <div className="card-section p-4 mb-3">
       <div className="d-flex justify-content-between">
       <h6> {props.username}</h6>
-      <i class="bi bi-three-dots d-block"
+      <i className="bi bi-three-dots d-block"
         style={{ cursor: "pointer" }}
         onClick={()=>{ setDots(!dots); setClicked(false)}}></i>
            </div>
