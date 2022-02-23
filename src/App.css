@@ -99,6 +99,7 @@ footer {
 }
 .footh6 {
   font-size: 14px;
+  margin-bottom: 0;
 }
 .linkedinIcon {
   color: var(--link-blue);
@@ -112,11 +113,17 @@ footer .bi-linkedin {
   padding-left: 0;
   margin-left: 0;
 }
+.bi-question-circle-fill,
+.bi-gear-fill {
+  font-size: 19px;
+  margin-right: 10px;
+}
 
 #dropdown-basic {
   background: white;
-  border: 1px solid black;
-  padding-right: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.63);
+  padding-right: 100%; /* this is wrong! should be automatic */
+  font-size: 13px;
 }
 
 /* Footer end */

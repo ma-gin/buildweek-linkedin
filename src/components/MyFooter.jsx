@@ -32,9 +32,13 @@ const MyFooter = function () {
           </Col>
           <Col md={3}>
             <Row className="mb-3">
-              <i className="bi bi-question-circle-fill"></i>
-              <h6 className="footh6">Questions?</h6>
-              <small className="d-block">Visit our Help Center</small>
+              <div className="d-flex">
+                <i className="bi bi-question-circle-fill"></i>
+                <div>
+                  <h6 className="footh6">Questions?</h6>
+                  <small className="d-block">Visit our Help Center</small>
+                </div>
+              </div>
             </Row>
             <Row>
               <i className="bi bi-gear-fill"></i>
@@ -45,10 +49,13 @@ const MyFooter = function () {
             </Row>
           </Col>
           <Col md={2}>
-            {/* add border */}
             <Dropdown>
               Select Language
-              <Dropdown.Toggle variant="transparent" id="dropdown-basic">
+              <Dropdown.Toggle
+                variant="transparent"
+                id="dropdown-basic"
+                className="text-muted"
+              >
                 English (English)
               </Dropdown.Toggle>
               <Dropdown.Menu>
