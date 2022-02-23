@@ -1,3 +1,4 @@
+
 import { Row, Col } from "react-bootstrap"
 import ActivitiesCard from "./ActivitiesCard"
 import AnalysisCard from "./AnalysisCard"
@@ -13,6 +14,7 @@ import SidebarTop from "./SidebarTop"
 import SidebarPeople from "./SidebarPeople"
 import SkillsCard from "./SkillsCard"
 import MyFooter from "./MyFooter"
+
 
 const MainSection = () => {
   return (
@@ -39,7 +41,7 @@ const MainSection = () => {
       </Row>
       <MyFooter />
     </div>
-  )
-}
+  );
+};
 
-export default MainSection
+export default MainSection;

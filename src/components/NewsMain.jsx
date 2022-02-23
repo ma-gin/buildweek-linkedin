@@ -10,7 +10,9 @@ const NewsMain = () => {
           <HomeSidebarLeft />
         </Col>
         <Col md={6}>
+
           <PostPost />
+
         </Col>
         <Col md={4}></Col>
       </Row>
