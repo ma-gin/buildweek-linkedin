@@ -2,6 +2,8 @@ import { Row, Col } from "react-bootstrap"
 import HomeSidebarLeft from "./HomeSidebarLeft"
 import PostPost from "./PostPost"
 import GetAPost from "./GetAPost"
+import LinkedNews from "./LinkedNews"
+import LinkedNewsSec from "./LinkedNewsSec"
 
 const NewsMain = () => {
   return (
@@ -14,7 +16,9 @@ const NewsMain = () => {
           <PostPost />
     <GetAPost/>
         </Col>
-        <Col md={4}></Col>
+        <Col md={4}>
+        <LinkedNews title={'Linkedin news'}/>        
+        </Col>
       </Row>
     </div>
   )
