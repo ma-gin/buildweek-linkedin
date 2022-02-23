@@ -72,8 +72,8 @@ const PremiumSVG = () => {
       viewBox="0 0 24 24"
       data-supported-dps="24x24"
       className="mercado-match"
-      width="18"
-      height="18"
+      width="14"
+      height="14"
       focusable="false">
       <path
         d="M20 20a3.36 3.36 0 001-2.39V6.38A3.38 3.38 0 0017.62 3H6.38A3.36 3.36 0 004 4z"
