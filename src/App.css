@@ -231,3 +231,7 @@ footer .bi-linkedin {
 .font-11 {
   font-size: 11px;
 }
+
+.text-black{
+  color: var(--text-black)!important;
+}
