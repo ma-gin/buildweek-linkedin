@@ -30,7 +30,7 @@ const GetAPost = () => {
   };
   return (
     <>
-    {posts === undefined && <div className="spinner-border text-primary m-auto" role="status">
+    {posts === undefined && <div className="spinner-border text-primary" style={{marginLeft: '47%'}} role="status">
   <span className="sr-only">Loading...</span>
 </div>}
       {posts && posts.filter((post,idx)=>idx > posts.length - 5 && idx < posts.length).map((post) =>  <SinglePost username={post.username} text={post.text} key={post._id} unique={post._id}/>
