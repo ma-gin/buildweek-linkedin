@@ -1,18 +1,20 @@
-import { Row, Col } from "react-bootstrap";
-import ActivitiesCard from "./ActivitiesCard";
-import AnalysisCard from "./AnalysisCard";
-import EducationCard from "./EducationCard";
-import ExperienceCard from "./ExperienceCard";
-import InfosCard from "./InfosCard";
-import InterestCard from "./InterestCard";
-import LanguagesCard from "./LanguagesCard";
-import LicensesCard from "./LicensesCard";
-import ProfileMain from "./ProfileMain";
-import ResourcesCard from "./Resourcescard";
-import SidebarTop from "./SidebarTop";
-import SidebarPeople from "./SidebarPeople";
-import SkillsCard from "./SkillsCard";
-import GetAPost from "./GetAPost";
+
+import { Row, Col } from "react-bootstrap"
+import ActivitiesCard from "./ActivitiesCard"
+import AnalysisCard from "./AnalysisCard"
+import EducationCard from "./EducationCard"
+import ExperienceCard from "./ExperienceCard"
+import InfosCard from "./InfosCard"
+import InterestCard from "./InterestCard"
+import LanguagesCard from "./LanguagesCard"
+import LicensesCard from "./LicensesCard"
+import ProfileMain from "./ProfileMain"
+import ResourcesCard from "./Resourcescard"
+import SidebarTop from "./SidebarTop"
+import SidebarPeople from "./SidebarPeople"
+import SkillsCard from "./SkillsCard"
+import MyFooter from "./MyFooter"
+
 
 const MainSection = () => {
   return (
@@ -37,6 +39,7 @@ const MainSection = () => {
           <SidebarPeople sectionTitle={"People you may know"} />
         </Col>
       </Row>
+      <MyFooter />
     </div>
   );
 };
