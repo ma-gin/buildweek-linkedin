@@ -1,11 +1,14 @@
 /* change font size */
-import { Container, Row, Col, Dropdown } from "react-bootstrap"
+import { Container, Row, Col, Dropdown } from "react-bootstrap";
 const MyFooter = function () {
   return (
-    <>
+    <footer>
       <Container>
         <Row>
-          <Col>LINKEDiN</Col>
+          <Col>
+            <span className="linkedinIcon">Linked</span>{" "}
+            <i className="bi bi-linkedin"></i>
+          </Col>
         </Row>
         <Row className="text-muted">
           <Col xs={6} md={2}>
@@ -27,19 +30,32 @@ const MyFooter = function () {
             <p>Advertising</p>
             <p>Small Business</p>
           </Col>
-          <Col md={2}>
-            <Row>
-              <i className="bi bi-question-circle-fill"></i>question
+          <Col md={3}>
+            <Row className="mb-3">
+              <div className="d-flex">
+                <i className="bi bi-question-circle-fill"></i>
+                <div>
+                  <h6 className="footh6">Questions?</h6>
+                  <small className="d-block">Visit our Help Center</small>
+                </div>
+              </div>
             </Row>
             <Row>
-              <i className="bi bi-gear-fill"></i> Manage
+              <i className="bi bi-gear-fill"></i>
+              <div>
+                <h6 className="footh6">Manage your account and privacy</h6>
+                <small>Go to your Settings</small>
+              </div>
             </Row>
           </Col>
           <Col md={2}>
-            {/* add border */}
             <Dropdown>
               Select Language
-              <Dropdown.Toggle variant="transparent" id="dropdown-basic">
+              <Dropdown.Toggle
+                variant="transparent"
+                id="dropdown-basic"
+                className="text-muted"
+              >
                 English (English)
               </Dropdown.Toggle>
               <Dropdown.Menu>
@@ -55,8 +71,8 @@ const MyFooter = function () {
           </Col>
         </Row>
       </Container>
-    </>
-  )
-}
+    </footer>
+  );
+};
 
-export default MyFooter
+export default MyFooter;

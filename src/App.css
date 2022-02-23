@@ -96,6 +96,41 @@ h6 {
 }
 /* --navbar end--- */
 
+/* Footer Start */
+footer {
+  font-size: 12px;
+}
+.footh6 {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.linkedinIcon {
+  color: var(--link-blue);
+  font-weight: 700;
+  font-size: 17px;
+  padding-right: 0;
+  margin-right: 0;
+}
+footer .bi-linkedin {
+  font-size: 17px;
+  padding-left: 0;
+  margin-left: 0;
+}
+.bi-question-circle-fill,
+.bi-gear-fill {
+  font-size: 19px;
+  margin-right: 10px;
+}
+
+#dropdown-basic {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.63);
+  padding-right: 100%; /* this is wrong! should be automatic */
+  font-size: 13px;
+}
+
+/* Footer end */
+
 .card-section {
   display: flex;
   flex-direction: column;
