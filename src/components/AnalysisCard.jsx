@@ -4,6 +4,7 @@ import AnalysisCardSec from './AnalysiscardSec'
 export default function AnalysisCard(props) {
   return( 
     <>
+    
   <div className="card-section p-4 mb-3">
 
 <h4 className='mb-3'> Analysis</h4>

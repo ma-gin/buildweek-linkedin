@@ -25,8 +25,12 @@ const MainSection = () => {
       <Row className="m-auto">
         <Col md={8}>
           <ProfileMain parameters={params.profileId}/>
+           {params.profileId === "62141c010448b4001511688d" &&
+           <>
           <AnalysisCard parameters={params.profileId}/>
           <ResourcesCard parameters={params.profileId}/>
+          </>
+          }
           <InfosCard parameters={params.profileId}/>
           <ActivitiesCard parameters={params.profileId}/>
           <ExperienceCard parameters={params.profileId}/>
