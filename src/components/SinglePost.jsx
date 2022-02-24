@@ -119,10 +119,11 @@ const SinglePost = (props) => {
           }}></i>
       </div>
       <div className="d-flex justify-content-between">
-        <div>
-          <img src={props.image} alt="none" />
+        <div className="d-flex flex-column">
+          <div className="mb-4 font-14">{props.text}</div>
+          <img className="post-post-img" src={props.image} alt="none" />
         </div>
-        <span className="mb-4 font-14">{props.text}</span>
+
         {dots && (
           <div className="d-flex">
             <i
