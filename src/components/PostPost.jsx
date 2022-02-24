@@ -47,19 +47,19 @@ export default function PostPost({ image }) {
         />
       </div>
       <div className="d-flex justify-content-between font-14 mt-2">
-        <div className="d-flex text-muted">
+        <div className="d-flex text-muted pointer">
           <ImageSVG />
           Photo
         </div>
-        <div className="d-flex  text-muted">
+        <div className="d-flex  text-muted pointer">
           <VideoSVG />
           Video
         </div>
-        <div className="d-flex text-muted">
+        <div className="d-flex text-muted pointer">
           <EventSVG />
           Event
         </div>
-        <div className="d-flex text-muted">
+        <div className="d-flex text-muted pointer">
           <ArticleSVG />
           Write article
         </div>
