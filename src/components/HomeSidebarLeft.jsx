@@ -1,10 +1,10 @@
 import HomeProfile from "./HomeProfile"
 import HomeDiscover from "./HomeDiscover"
 
-export default function HomeSidebarLeft() {
+export default function HomeSidebarLeft({ user }) {
   return (
     <>
-      <HomeProfile />
+      <HomeProfile me={user} />
       <HomeDiscover />
     </>
   )

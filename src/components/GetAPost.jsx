@@ -6,6 +6,7 @@ const GetAPost = () => {
 
   useEffect(() => {
     getFetch()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [!posts])
 
   const getFetch = async () => {
