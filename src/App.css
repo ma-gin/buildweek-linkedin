@@ -215,6 +215,7 @@ footer .bi-linkedin {
   height: 60px;
   border-radius: 50%;
   border: 2px solid white;
+  object-fit: cover;
 }
 
 .home-cover-img {
