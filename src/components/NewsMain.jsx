@@ -3,7 +3,6 @@ import HomeSidebarLeft from "./HomeSidebarLeft"
 import PostPost from "./PostPost"
 import GetAPost from "./GetAPost"
 import LinkedNews from "./LinkedNews"
-import LinkedNewsSec from "./LinkedNewsSec"
 
 const NewsMain = () => {
   return (
@@ -14,10 +13,10 @@ const NewsMain = () => {
         </Col>
         <Col md={6}>
           <PostPost />
-    <GetAPost/>
+          <GetAPost />
         </Col>
         <Col md={4}>
-        <LinkedNews title={'LinkedIn News'}/>        
+          <LinkedNews title={"LinkedIn News"} />
         </Col>
       </Row>
     </div>
