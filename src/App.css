@@ -164,9 +164,10 @@ footer .bi-linkedin {
 }
 
 .experience-image {
-  width: 10%;
-  height: 40%;
+  width: 15%;
+  height: 50%;
   margin-right: 10px;
+  object-fit: contain;
 }
 
 .interest-titles {
