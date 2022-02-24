@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { Form, Button } from "react-bootstrap"
 import axios from "axios"
+import { Link } from "react-router-dom"
+import MainSection from "./MainSection"
 
 const SinglePost = (props) => {
   const [clicked, setClicked] = useState(false)
@@ -12,6 +14,8 @@ const SinglePost = (props) => {
   })
   const postId = props.unique
   // const userId = "62141c010448b4001511688d"
+
+
 
   const formData = new FormData()
 
@@ -109,7 +113,11 @@ const SinglePost = (props) => {
   return (
     <div className="card-section p-4 mb-3">
       <div className="d-flex justify-content-between">
-        <h6> {props.username}</h6>
+      <Link to={"/profile/" + props.params} element={<MainSection />} >
+      <h6> {props.username}</h6>
+                </Link>
+
+       
         <i
           className="bi bi-three-dots d-block"
           style={{ cursor: "pointer" }}
