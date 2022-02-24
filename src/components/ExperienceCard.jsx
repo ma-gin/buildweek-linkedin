@@ -93,7 +93,7 @@ export default function ExperienceCard(props) {
         {user.map((userex) => (
           <ExperienceCardSec
             image={
-              "http://www.50epiu.it/wp-content/uploads/2015/12/placeholder.gif"
+              userex.image
             }
             titleText={userex.role}
             description={userex.description}
