@@ -132,16 +132,6 @@ const SinglePost = (props) => {
           {props.image && (
             <img className="post-post-img mb-3" src={props.image} alt="none" />
           )}
-          <div className="d-flex pointer" style={{ borderTop: "1px solid gray", paddingTop: "20px" }} >
-          <i class="bi bi-hand-thumbs-up mr-3"></i>
-          <span className="mr-5">Like</span>
-          <i class="bi bi-chat-left-dots mr-3"></i>
-          <span className="mr-5">Comment</span>
-          <i class="bi bi-arrow-90deg-right mr-3"></i>
-          <span className="mr-5">Share</span>
-          <i class="bi bi-send-fill mr-3"></i>
-          <span >Send</span>
-          </div>
         </div>
 
         {dots && (
@@ -157,6 +147,24 @@ const SinglePost = (props) => {
           </div>
         )}
       </div>
+      <div className="d-flex justify-content-between" style={{ borderTop: "1px solid gray", paddingTop: "20px" }} >
+          <div className="pointer">
+          <i class="bi bi-hand-thumbs-up mr-2"></i>
+          <span >Like</span>
+          </div>
+          <div className="pointer">
+          <i class="bi bi-chat-left-dots mr-2"></i>
+          <span >Comment</span>
+          </div>
+          <div className="pointer">
+          <i class="bi bi-arrow-90deg-right mr-2"></i>
+          <span >Share</span>
+          </div>
+          <div className="pointer" >
+          <i class="bi bi-send-fill mr-2"></i>
+          <span >Send</span>
+          </div>
+          </div>
       {clicked && (
         <Form
           style={{ borderTop: "1px solid gray", paddingTop: "20px" }}
