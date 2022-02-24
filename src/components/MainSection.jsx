@@ -32,7 +32,8 @@ const MainSection = () => {
           </>
           }
           <InfosCard parameters={params.profileId}/>
-          <ActivitiesCard parameters={params.profileId}/>
+          {params.profileId === "62141c010448b4001511688d" &&
+          <ActivitiesCard parameters={params.profileId}/>}
           <ExperienceCard parameters={params.profileId}/>
           <EducationCard parameters={params.profileId}/>
           <LicensesCard parameters={params.profileId}/>
