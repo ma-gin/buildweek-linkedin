@@ -15,8 +15,6 @@ const SinglePost = (props) => {
   const postId = props.unique
   // const userId = "62141c010448b4001511688d"
 
-
-
   const formData = new FormData()
 
   const poId =
@@ -113,11 +111,13 @@ const SinglePost = (props) => {
   return (
     <div className="card-section p-4 mb-3">
       <div className="d-flex justify-content-between">
-      <Link to={"/profile/" + props.params} element={<MainSection />} >
-      <h6> {props.username}</h6>
-                </Link>
+        <div className="d-flex align-items-center mb-3">
+          <img className="post-img mr-2" src={props.userimg} alt="" />
+          <Link to={"/profile/" + props.params} element={<MainSection />}>
+            <h6> {props.username}</h6>
+          </Link>
+        </div>
 
-       
         <i
           className="bi bi-three-dots d-block"
           style={{ cursor: "pointer" }}
@@ -129,7 +129,9 @@ const SinglePost = (props) => {
       <div className="d-flex justify-content-between">
         <div className="d-flex flex-column">
           <div className="mb-4 font-14">{props.text}</div>
-          <img className="post-post-img" src={props.image} alt="none" />
+          {props.image && (
+            <img className="post-post-img" src={props.image} alt="none" />
+          )}
         </div>
 
         {dots && (

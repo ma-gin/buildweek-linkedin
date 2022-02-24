@@ -48,6 +48,7 @@ const GetAPost = () => {
               key={post._id}
               unique={post._id}
               params={post.user._id}
+              userimg={post.user.image}
             />
           ))}
     </>
