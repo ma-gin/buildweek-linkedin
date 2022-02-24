@@ -98,3 +98,7 @@
   -webkit-box-orient: vertical;
   font-weight: bold;
 }
+
+i {
+  cursor: pointer;
+}

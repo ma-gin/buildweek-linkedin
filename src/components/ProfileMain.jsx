@@ -1,10 +1,26 @@
-import { Row, Col, Button } from "react-bootstrap"
+import { Row, Col, Button, Modal } from "react-bootstrap"
 import { useEffect, useState } from "react"
 import "../App.css"
 import "../profile.css"
+import axios from "axios"
 
 export default function ProfileMain() {
   const [user, setUser] = useState({})
+  const [show, setShow] = useState(false)
+
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  const formData = new FormData()
+
+  const uploadImg = (e) => {
+    console.log(e.target.files[0].name)
+    formData.append("profile", e.target.files[0])
+  }
 
   const fetchData = async () => {
     try {
@@ -18,15 +34,55 @@ export default function ProfileMain() {
         }
       )
       const data = await response.json()
+      console.log(data)
       setUser(data)
     } catch (error) {
       console.log(error)
     }
   }
 
-  useEffect(() => {
-    fetchData()
-  }, [])
+  const submitFile = (e) => {
+    e.preventDefault()
+    console.log(formData)
+
+    // axios
+    //   .post(
+    //     "https://striveschool-api.herokuapp.com/api/profile/62141c010448b4001511688d/picture/",
+    //     { formData },
+    //     {
+    //       headers: {
+    //         Authorization:
+    //           "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjE0MWMwMTA0NDhiNDAwMTUxMTY4OGQiLCJpYXQiOjE2NDU0ODUwNTcsImV4cCI6MTY0NjY5NDY1N30.RpYP2LhIfMwWh9okgKoO9hO9xHHxMIrpOw6PlnVfviI",
+    //       },
+    //     }
+    //   )
+    //   .then((response) => {
+    //     console.log(response)
+    //   })
+    //   .catch((error) => {
+    //     console.log(error)
+    //   })
+
+    axios({
+      method: "post",
+      url: "https://striveschool-api.herokuapp.com/api/profile/62141c010448b4001511688d/picture/",
+      data: formData,
+      headers: {
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjE0MWMwMTA0NDhiNDAwMTUxMTY4OGQiLCJpYXQiOjE2NDU0ODUwNTcsImV4cCI6MTY0NjY5NDY1N30.RpYP2LhIfMwWh9okgKoO9hO9xHHxMIrpOw6PlnVfviI",
+        "Content-Type": "multipart/form-data",
+      },
+    })
+      .then(function (response) {
+        //handle success
+        console.log(response)
+      })
+      .catch(function (response) {
+        //handle error
+        console.log(response)
+      })
+  }
+
   return (
     <div className="card-section profile-main mb-3">
       <img
@@ -35,7 +91,7 @@ export default function ProfileMain() {
         alt="cover"
       />
       <img className="profile-img" src={user.image} alt="profile" />
-      <i className="bi bi-pencil pen-lg"></i>
+      <i className="bi bi-pencil pen-lg" onClick={() => handleShow()}></i>
       <div className="profile-card m-4">
         <Row>
           <Col xs={6}>
@@ -83,7 +139,7 @@ export default function ProfileMain() {
             <div className="card-section p-2 position-relative pr-5 open-card font-12">
               <div>
                 <span className="font-weight-bold">
-                  Find potential clients{" "}
+                  Find potential clients typ
                 </span>
                 by showcasing the services your provide.
               </div>
@@ -92,6 +148,20 @@ export default function ProfileMain() {
             </div>
           </Col>
         </Row>
+
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Change profile image</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <input type="file" name="profile-img" onChange={uploadImg} />
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={(e) => submitFile(e)}>
+              Post
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </div>
     </div>
   )
