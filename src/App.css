@@ -189,7 +189,7 @@ footer .bi-linkedin {
 .post-input {
   width: 100%;
   border-radius: 30px;
-  min-height: 50px;
+  min-height: 40px;
   height: fit-content;
   border: 1px solid gray !important;
 }
