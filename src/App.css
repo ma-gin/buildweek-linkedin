@@ -252,3 +252,7 @@ footer .bi-linkedin {
 .text-lightBlue {
   color: rgb(1, 196, 196) !important;
 }
+
+.pointer {
+  cursor: pointer;
+}

@@ -3,6 +3,7 @@ import HomeSidebarLeft from "./HomeSidebarLeft"
 import PostPost from "./PostPost"
 import GetAPost from "./GetAPost"
 import LinkedNews from "./LinkedNews"
+import HomeFooter from "./HomeFooter"
 
 const NewsMain = () => {
   return (
@@ -17,6 +18,7 @@ const NewsMain = () => {
         </Col>
         <Col md={4}>
           <LinkedNews title={"LinkedIn News"} />
+          <HomeFooter/>
         </Col>
       </Row>
     </div>
