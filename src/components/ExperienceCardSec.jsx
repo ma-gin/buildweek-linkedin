@@ -11,7 +11,6 @@ const ExperienceCardSec = (props) => {
   const formData = new FormData()
 
   const uploadImg = (e) => {
-    console.log(e.target.files[0].name)
     formData.append("experience", e.target.files[0])
   }
 
@@ -39,7 +38,6 @@ const ExperienceCardSec = (props) => {
 
   const submitFile = (e) => {
     e.preventDefault()
-    console.log(formData)
 
     // axios
     //   .post(
