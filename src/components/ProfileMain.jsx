@@ -3,7 +3,6 @@ import { useEffect, useState } from "react"
 import "../App.css"
 import "../profile.css"
 import axios from "axios"
-import { propTypes } from "react-bootstrap/esm/Image"
 
 export default function ProfileMain(props) {
   const [user, setUser] = useState({})
@@ -14,6 +13,7 @@ export default function ProfileMain(props) {
 
   useEffect(() => {
     fetchData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const formData = new FormData()
@@ -22,19 +22,19 @@ export default function ProfileMain(props) {
     formData.append("profile", e.target.files[0])
   }
 
-  const httpFetch = props.parameters === "62141c010448b4001511688d" ? "https://striveschool-api.herokuapp.com/api/profile/me" : "https://striveschool-api.herokuapp.com/api/profile/" + props.parameters
+  const httpFetch =
+    props.parameters === "62141c010448b4001511688d"
+      ? "https://striveschool-api.herokuapp.com/api/profile/me"
+      : "https://striveschool-api.herokuapp.com/api/profile/" + props.parameters
 
   const fetchData = async () => {
     try {
-      const response = await fetch(
-       httpFetch,
-        {
-          headers: {
-            Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjE0MWMwMTA0NDhiNDAwMTUxMTY4OGQiLCJpYXQiOjE2NDU0ODUwNTcsImV4cCI6MTY0NjY5NDY1N30.RpYP2LhIfMwWh9okgKoO9hO9xHHxMIrpOw6PlnVfviI",
-          },
-        }
-      )
+      const response = await fetch(httpFetch, {
+        headers: {
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjE0MWMwMTA0NDhiNDAwMTUxMTY4OGQiLCJpYXQiOjE2NDU0ODUwNTcsImV4cCI6MTY0NjY5NDY1N30.RpYP2LhIfMwWh9okgKoO9hO9xHHxMIrpOw6PlnVfviI",
+        },
+      })
       const data = await response.json()
       console.log(data)
       setUser(data)
@@ -43,14 +43,15 @@ export default function ProfileMain(props) {
     }
   }
 
-
-
   const submitFile = (e) => {
     e.preventDefault()
 
     axios({
       method: "post",
-      url: "https://striveschool-api.herokuapp.com/api/profile/" + props.parameters +  "/picture/",
+      url:
+        "https://striveschool-api.herokuapp.com/api/profile/" +
+        props.parameters +
+        "/picture/",
       data: formData,
       headers: {
         Authorization:
@@ -75,7 +76,7 @@ export default function ProfileMain(props) {
         src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.fineartamerica.com%2Fimages%2Fartworkimages%2Fmediumlarge%2F3%2Fcurvy-mountain-road-idaho-tatiana-travelways.jpg&f=1&nofb=1"
         alt="cover"
       />
-      <img className="profile-img" src={user.image} alt="profile" />
+      <img className="profile-img object-top" src={user.image} alt="profile" />
       <i className="bi bi-pencil pen-lg" onClick={() => handleShow()}></i>
       <div className="profile-card m-4">
         <Row>

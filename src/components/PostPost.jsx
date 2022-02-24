@@ -19,7 +19,7 @@ export default function PostPost({ image }) {
     console.log("working")
 
     try {
-      await fetch("https://striveschool-api.herokuapp.com/api/posts", {
+      await fetch("https://striveschool-api.herokuapp.com/api/posts/", {
         method: "POST",
         body: JSON.stringify(post),
         headers: {
@@ -28,7 +28,7 @@ export default function PostPost({ image }) {
           "Content-type": "application/json",
         },
       })
-      alert("posted")
+      console.log("posted")
     } catch (error) {
       console.log(error)
     }
@@ -37,7 +37,7 @@ export default function PostPost({ image }) {
   return (
     <div className="card-section px-2 py-3  mb-3">
       <div className="d-flex align-items-center">
-        <img className="post-img" src={image} alt="" />
+        <img className="post-img object-top" src={image} alt="" />
         <input
           className="post-input pl-3 mx-2"
           type="text"
@@ -70,10 +70,16 @@ export default function PostPost({ image }) {
           <Modal.Title>Create a post</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <textarea placeholder="What do you want to talk about?"></textarea>
+          <textarea
+            placeholder="What do you want to talk about?"
+            onChange={(e) => updatePost(e.target.value)}></textarea>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button
+            variant="secondary"
+            onClick={(e) => {
+              handleSubmit(e)
+            }}>
             Post
           </Button>
         </Modal.Footer>

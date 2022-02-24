@@ -183,8 +183,21 @@ footer .bi-linkedin {
 .post-img {
   width: 40px;
   height: 40px;
+  aspect-ratio: 1;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.nav-img {
+  width: 26px;
+  height: 26px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.object-top {
+  object-position: top;
 }
 
 .post-input {
@@ -211,6 +224,7 @@ footer .bi-linkedin {
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  aspect-ratio: 1;
   width: 60px;
   height: 60px;
   border-radius: 50%;
