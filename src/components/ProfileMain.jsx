@@ -18,7 +18,6 @@ export default function ProfileMain() {
   const formData = new FormData()
 
   const uploadImg = (e) => {
-    console.log(e.target.files[0].name)
     formData.append("profile", e.target.files[0])
   }
 
@@ -43,25 +42,6 @@ export default function ProfileMain() {
 
   const submitFile = (e) => {
     e.preventDefault()
-    console.log(formData)
-
-    // axios
-    //   .post(
-    //     "https://striveschool-api.herokuapp.com/api/profile/62141c010448b4001511688d/picture/",
-    //     { formData },
-    //     {
-    //       headers: {
-    //         Authorization:
-    //           "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjE0MWMwMTA0NDhiNDAwMTUxMTY4OGQiLCJpYXQiOjE2NDU0ODUwNTcsImV4cCI6MTY0NjY5NDY1N30.RpYP2LhIfMwWh9okgKoO9hO9xHHxMIrpOw6PlnVfviI",
-    //       },
-    //     }
-    //   )
-    //   .then((response) => {
-    //     console.log(response)
-    //   })
-    //   .catch((error) => {
-    //     console.log(error)
-    //   })
 
     axios({
       method: "post",
