@@ -109,7 +109,7 @@ const SinglePost = (props) => {
   }
 
   return (
-    <div className="card-section p-4 mb-3">
+    <div className="card-section p-4 mb-2">
       <div className="d-flex justify-content-between">
         <div className="d-flex align-items-center mb-3">
           <img className="post-img mr-2" src={props.userimg} alt="" />
@@ -128,10 +128,20 @@ const SinglePost = (props) => {
       </div>
       <div className="d-flex justify-content-between">
         <div className="d-flex flex-column">
-          <div className="mb-4 font-14">{props.text}</div>
+          <div className="mb-2 font-14">{props.text}</div>
           {props.image && (
-            <img className="post-post-img" src={props.image} alt="none" />
+            <img className="post-post-img mb-3" src={props.image} alt="none" />
           )}
+          <div className="d-flex pointer" style={{ borderTop: "1px solid gray", paddingTop: "20px" }} >
+          <i class="bi bi-hand-thumbs-up mr-3"></i>
+          <span className="mr-5">Like</span>
+          <i class="bi bi-chat-left-dots mr-3"></i>
+          <span className="mr-5">Comment</span>
+          <i class="bi bi-arrow-90deg-right mr-3"></i>
+          <span className="mr-5">Share</span>
+          <i class="bi bi-send-fill mr-3"></i>
+          <span >Send</span>
+          </div>
         </div>
 
         {dots && (
