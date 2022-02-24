@@ -1,8 +1,13 @@
 import { useState } from "react"
-import { Button } from "react-bootstrap"
+import { Button, Modal } from "react-bootstrap"
 
-export default function PostPost() {
+export default function PostPost({ image }) {
   const [post, setPost] = useState({ text: undefined })
+
+  const [show, setShow] = useState(false)
+
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
 
   const updatePost = (value) => {
     setPost({ text: value })
@@ -30,28 +35,16 @@ export default function PostPost() {
   }
 
   return (
-    <div className="card-section px-4 py-1 mb-3">
+    <div className="card-section px-2 py-3  mb-3">
       <div className="d-flex align-items-center">
-        <img
-          className="post-img m-3"
-          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmix96sac.com%2Fwp-content%2Fuploads%2Fsites%2F4%2F2018%2F10%2FGettyImages-498542040.jpg&f=1&nofb=1"
-          alt=""
-        />
+        <img className="post-img" src={image} alt="" />
         <input
-          className="post-input pl-3"
+          className="post-input pl-3 mx-2"
           type="text"
           placeholder="Start a post"
-          onChange={(e) => {
-            updatePost(e.target.value)
-          }}
+          onChange={handleShow}
+          onClick={handleShow}
         />
-        <Button
-          className="ml-3"
-          onClick={(e) => {
-            handleSubmit(e)
-          }}>
-          Send
-        </Button>
       </div>
       <div className="d-flex justify-content-between font-14 mt-2">
         <div className="d-flex text-muted">
@@ -71,6 +64,20 @@ export default function PostPost() {
           Write article
         </div>
       </div>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Create a post</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <textarea placeholder="What do you want to talk about?"></textarea>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Post
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   )
 }
