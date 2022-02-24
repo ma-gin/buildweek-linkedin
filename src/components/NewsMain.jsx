@@ -3,6 +3,7 @@ import HomeSidebarLeft from "./HomeSidebarLeft"
 import PostPost from "./PostPost"
 import GetAPost from "./GetAPost"
 import LinkedNews from "./LinkedNews"
+import HomeFooter from "./HomeFooter"
 import { useState, useEffect } from "react"
 
 const NewsMain = ({ changeImg }) => {
@@ -44,6 +45,7 @@ const NewsMain = ({ changeImg }) => {
         </Col>
         <Col md={4}>
           <LinkedNews title={"LinkedIn News"} />
+          <HomeFooter/>
         </Col>
       </Row>
     </div>
