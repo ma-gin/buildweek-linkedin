@@ -11,7 +11,7 @@ function App() {
       <MyNavbar />
       <Routes>
         <Route path="/" element={<NewsMain />} />
-        <Route path="/profile" element={<MainSection />} />
+        <Route path="/profile/:profileId" element={<MainSection />} />
       </Routes>
     </BrowserRouter>
   )

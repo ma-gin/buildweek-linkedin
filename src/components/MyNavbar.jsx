@@ -40,7 +40,7 @@ const MyNavbar = function (props) {
                 <i className="bi bi-bell-fill"></i>Notifications
               </div>
               <div className="mr-4 font-12">
-                <Link to="/profile" element={<MainSection />} className={location.pathname==='/profile' ? "text-black": "text-muted"}>
+                <Link to="/profile/62141c010448b4001511688d" element={<MainSection />} className={location.pathname==='/profile/62141c010448b4001511688d' ? "text-black": "text-muted"}>
                   <i className="bi bi-person-circle"></i>
                 </Link>
                 <NavDropdown title="Me" id="profile-nav-dropdown">

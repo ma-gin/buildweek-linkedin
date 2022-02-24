@@ -3,8 +3,9 @@ import { useEffect, useState } from "react"
 import "../App.css"
 import "../profile.css"
 import axios from "axios"
+import { propTypes } from "react-bootstrap/esm/Image"
 
-export default function ProfileMain() {
+export default function ProfileMain(props) {
   const [user, setUser] = useState({})
   const [show, setShow] = useState(false)
 
@@ -21,10 +22,12 @@ export default function ProfileMain() {
     formData.append("profile", e.target.files[0])
   }
 
+  const httpFetch = props.parameters === "62141c010448b4001511688d" ? "https://striveschool-api.herokuapp.com/api/profile/me" : "https://striveschool-api.herokuapp.com/api/profile/" + props.parameters
+
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "https://striveschool-api.herokuapp.com/api/profile/me",
+       httpFetch,
         {
           headers: {
             Authorization:
@@ -40,12 +43,14 @@ export default function ProfileMain() {
     }
   }
 
+
+
   const submitFile = (e) => {
     e.preventDefault()
 
     axios({
       method: "post",
-      url: "https://striveschool-api.herokuapp.com/api/profile/62141c010448b4001511688d/picture/",
+      url: "https://striveschool-api.herokuapp.com/api/profile/" + props.parameters +  "/picture/",
       data: formData,
       headers: {
         Authorization:

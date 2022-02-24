@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Image, Modal, Button } from "react-bootstrap"
 import axios from "axios"
 
+
 const ExperienceCardSec = (props) => {
 
   const [show, setShow] = useState(false)
@@ -14,8 +15,10 @@ const ExperienceCardSec = (props) => {
     formData.append("experience", e.target.files[0])
   }
 
+
+
   const exId =
-    "https://striveschool-api.herokuapp.com/api/profile/62141c010448b4001511688d/experiences/" +
+    "https://striveschool-api.herokuapp.com/api/profile/" + props.parameters + "/experiences/" +
     props.experienceId
 
   const deleteData = async () => {

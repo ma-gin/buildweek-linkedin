@@ -14,24 +14,27 @@ import SidebarTop from "./SidebarTop"
 import SidebarPeople from "./SidebarPeople"
 import SkillsCard from "./SkillsCard"
 import MyFooter from "./MyFooter"
+import { useParams } from "react-router-dom"
 
 
 const MainSection = () => {
+
+  let params = useParams()
   return (
     <div className="container padding-sec">
       <Row className="m-auto">
         <Col md={8}>
-          <ProfileMain />
-          <AnalysisCard />
-          <ResourcesCard />
-          <InfosCard />
-          <ActivitiesCard />
-          <ExperienceCard />
-          <EducationCard />
-          <LicensesCard />
-          <SkillsCard />
-          <LanguagesCard />
-          <InterestCard />
+          <ProfileMain parameters={params.profileId}/>
+          <AnalysisCard parameters={params.profileId}/>
+          <ResourcesCard parameters={params.profileId}/>
+          <InfosCard parameters={params.profileId}/>
+          <ActivitiesCard parameters={params.profileId}/>
+          <ExperienceCard parameters={params.profileId}/>
+          <EducationCard parameters={params.profileId}/>
+          <LicensesCard parameters={params.profileId}/>
+          <SkillsCard parameters={params.profileId}/>
+          <LanguagesCard parameters={params.profileId}/>
+          <InterestCard parameters={params.profileId}/>
         </Col>
         <Col md={4}>
           <SidebarTop />
