@@ -26,10 +26,13 @@ export default function ExperienceCard(props) {
     fetchData()
   }, [])
 
+  const httpFetch = props.parameters === "62141c010448b4001511688d" ? "https://striveschool-api.herokuapp.com/api/profile/62141c010448b4001511688d/experiences" : "https://striveschool-api.herokuapp.com/api/profile/" + props.parameters + "/experiences/" 
+
+
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "https://striveschool-api.herokuapp.com/api/profile/62141c010448b4001511688d/experiences",
+       httpFetch,
         {
           headers: {
             Authorization:
