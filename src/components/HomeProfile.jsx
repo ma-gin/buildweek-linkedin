@@ -29,17 +29,15 @@ export default function HomeProfile({ me }) {
         </div>
         <div className="d-flex flex-column justify-content-between link pl-2">
           <p>4953</p>
-          <p>7483</p>
+          <p>57483</p>
         </div>
       </div>
       <div className="text-left try-prem-home p-2">
         <p>Access exclusive tools & insights</p>
-        <p className="font-weight-bold d-flex font-10 align-items-center">
-          <span className="mr-1">
-            <PremiumSVG />
-          </span>
+        <div className="font-weight-bold d-flex font-10 align-items-center mt-1">
+          <PremiumSVG />
           Try Premium for free
-        </p>
+        </div>
       </div>
       <div className="text-left p-2 d-flex font-10">
         <span className="mr-1">
@@ -57,7 +55,7 @@ const PremiumSVG = () => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       data-supported-dps="24x24"
-      className="mercado-match"
+      className="mr-1"
       width="14"
       height="14"
       focusable="false">

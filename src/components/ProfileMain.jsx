@@ -82,19 +82,20 @@ export default function ProfileMain(props) {
         alt="cover"
       />
       <img className="profile-img object-top" src={user.image} alt="profile" />
-{params.profileId === '62141c010448b4001511688d' && 
-      <i className="bi bi-pencil pen-lg" onClick={() => handleShow()}></i>}
+      {params.profileId === "62141c010448b4001511688d" && (
+        <i className="bi bi-pencil pen-lg" onClick={() => handleShow()}></i>
+      )}
       <div className="profile-card m-4">
         <Row>
           <Col xs={6}>
             <h4 className="font-weight-bold">{`${user.name} ${user.surname}`}</h4>
             <h6>{user.title}</h6>
             <div className="d-flex">
-              <h6>{user.area}</h6>
+              <h6 className="font-13">{user.area}</h6>
               <span className="mx-2"></span>
               <div className="link font-13">Contact Info</div>
             </div>
-            <div className="link font-13">500+ connections</div>
+            <div className="link font-13">4953 connections</div>
           </Col>
           <Col xs={6}>
             <div className="d-flex align-items-center">
@@ -107,17 +108,20 @@ export default function ProfileMain(props) {
             </div>
           </Col>
         </Row>
-        <Row>{params.profileId === '62141c010448b4001511688d' &&
-          <>
-          <div className="pl-3 mt-4 d-flex align-items-center">
-            <Button className="generic-btn">Open to</Button>
-            <Button className="generic-btn" variant="outline-primary">
-              Add profile section
-            </Button>
-            <Button className="generic-btn" variant="outline-secondary">
-              More
-            </Button>
-          </div></>}
+        <Row>
+          {params.profileId === "62141c010448b4001511688d" && (
+            <>
+              <div className="pl-3 mt-4 d-flex align-items-center">
+                <Button className="generic-btn">Open to</Button>
+                <Button className="generic-btn" variant="outline-primary">
+                  Add profile section
+                </Button>
+                <Button className="generic-btn" variant="outline-secondary">
+                  More
+                </Button>
+              </div>
+            </>
+          )}
         </Row>
         <Row className="d-none">
           <Col xs={6}>

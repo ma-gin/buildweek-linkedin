@@ -39,7 +39,7 @@ const NewsMain = ({ changeImg }) => {
         <Col md={2}>
           <HomeSidebarLeft user={user} />
         </Col>
-        <Col md={6}>
+        <Col md={5}>
           <PostPost
             image={user.image}
             name={user.name}
