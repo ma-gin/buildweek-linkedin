@@ -2,7 +2,7 @@ import "./App.css"
 import MyNavbar from "./components/MyNavbar"
 import MainSection from "./components/MainSection"
 import { useEffect, useState } from "react"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { HashRouter, Routes, Route } from "react-router-dom"
 import NewsMain from "./components/NewsMain"
 
 function App() {
@@ -30,13 +30,13 @@ function App() {
   
 
   return (
-    <BrowserRouter>
+    <HashRouter basename="/">
       {imageRendered ? <MyNavbar image={img} funcD={fet}/> : <MyNavbar funcD={fet} />}
       <Routes>
         <Route path="/" element={<NewsMain changeImg={changeImg} />} />
         <Route path="/profile/:profileId" element={<MainSection fetchD={changeFet}/>} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
