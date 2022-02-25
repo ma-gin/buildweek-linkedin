@@ -45,6 +45,22 @@ const SinglePost = (props) => {
     event.preventDefault()
     const posId =
       "https://striveschool-api.herokuapp.com/api/posts/" + props.unique
+      axios({
+        method: "post",
+        url: "https://striveschool-api.herokuapp.com/api/posts/" + postId,
+        data: formData,
+        headers: {
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjE0MWMwMTA0NDhiNDAwMTUxMTY4OGQiLCJpYXQiOjE2NDU0ODUwNTcsImV4cCI6MTY0NjY5NDY1N30.RpYP2LhIfMwWh9okgKoO9hO9xHHxMIrpOw6PlnVfviI",
+          "Content-Type": "multipart/form-data",
+        },
+      })
+        .then((response) => {
+          console.log(response)
+        })
+        .catch((error) => {
+          console.log(error)
+        })
 
     try {
       const response = await fetch(posId, {
@@ -62,22 +78,7 @@ const SinglePost = (props) => {
     } catch (error) {
       console.log(error)
     }
-    axios({
-      method: "post",
-      url: "https://striveschool-api.herokuapp.com/api/posts/" + postId,
-      data: formData,
-      headers: {
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjE0MWMwMTA0NDhiNDAwMTUxMTY4OGQiLCJpYXQiOjE2NDU0ODUwNTcsImV4cCI6MTY0NjY5NDY1N30.RpYP2LhIfMwWh9okgKoO9hO9xHHxMIrpOw6PlnVfviI",
-        "Content-Type": "multipart/form-data",
-      },
-    })
-      .then((response) => {
-        console.log(response)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
+    
   }
 
   const grabValue = (value) => {
