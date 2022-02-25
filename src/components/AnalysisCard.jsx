@@ -4,16 +4,17 @@ import AnalysisCardSec from './AnalysiscardSec'
 export default function AnalysisCard(props) {
   return( 
     <>
+    
   <div className="card-section p-4 mb-3">
 
-<h4> Analysis</h4>
+<h4 className='mb-3'> Analysis</h4>
 <div className='d-flex'>
-<i class="bi bi-eye-fill mr-2"></i>
+<i className="bi bi-eye-fill mr-2"></i>
 <p>Only you</p>
 </div>
 <Row>
 <Col md={4}>
-<AnalysisCardSec icons={'bi bi-people-fill mr-2'
+<AnalysisCardSec icons={'bi bi-people-fill mr-2 font-18'
 }  textTitle={'14 profile views'} description={'know who visited your profile.'} />
 </Col>
 <Col md={4}>
