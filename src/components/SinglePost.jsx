@@ -7,6 +7,11 @@ import MainSection from "./MainSection"
 const SinglePost = (props) => {
   const [clicked, setClicked] = useState(false)
 
+  const [counter, setCounter] = useState(28)
+
+  const [like, setLike] = useState(false)
+
+
   const [dots, setDots] = useState(false)
 
   const [post, setPost] = useState({
@@ -126,7 +131,7 @@ const SinglePost = (props) => {
             <h6 className="mb-0"> {props.username}</h6>
           </Link>
           <span className="text-muted font-12 text-one">{props.job}</span>
-          <span className="text-muted font-11 text-one">{date}</span>
+          <span className="text-muted font-11 text-one">{date.slice(0,10) + " • " + date.slice(11,19)}</span>
           </div>
         </div>
        { props.params=== '62141c010448b4001511688d'&& 
@@ -159,10 +164,11 @@ const SinglePost = (props) => {
           </div>
         )}
       </div>
-      <div className="d-flex justify-content-between" style={{ borderTop: "1px solid gray", paddingTop: "20px" }} >
-          <div className="pointer">
-          <i className="bi bi-hand-thumbs-up mr-2"></i>
-          <span >Like</span>
+      <span className="font-12 text-muted ml-3">{counter}</span>
+      <div className="d-flex justify-content-between font-14 ml-2 mr-2 mt-3" style={{ borderTop: "1px solid gray", paddingTop: "20px" }} >
+          <div className="pointer" onClick={() => {like ? setCounter(counter-1): setCounter(counter+1) ; setLike(!like)}}>
+         {like ?<> <i className="bi bi-hand-thumbs-up text-primary mr-2"></i> <span className="text-primary">Like</span></>:<><i className="bi bi-hand-thumbs-up mr-2"></i>  <span >Like</span></>}
+          
           </div>
           <div className="pointer">
           <i className="bi bi-chat-left-dots mr-2"></i>
@@ -178,7 +184,7 @@ const SinglePost = (props) => {
           </div>
           </div>
       {clicked && (
-        <Form
+        <Form className="mt-4"
           style={{ borderTop: "1px solid gray", paddingTop: "20px" }}
           onSubmit={(event) => {handleSubmit(event); setDots(!dots); setClicked(!clicked)}}>
           <Form.Group controlId="formBasicText">
