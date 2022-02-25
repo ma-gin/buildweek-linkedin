@@ -65,7 +65,7 @@ export default function PostPost({ image, name, surname }) {
         </div>
       </div>
 
-      <Modal className="post-modal" show={show} onHide={handleClose}>
+      <Modal className="post-modal mx-auto" style={{maxWidth: '400px', left: '0', right: '0'}} show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title className="font-13">Create a post</Modal.Title>
         </Modal.Header>
@@ -74,9 +74,14 @@ export default function PostPost({ image, name, surname }) {
             <img className="post-img object-top mr-2" src={image} alt="" />
             <div className="d-flex flex-column">
               <span>{`${name} ${surname}`}</span>
-              <NavDropdown className="text-muted" title="anyone">
-                <GlobeSVG />
-              </NavDropdown>
+              <div className="d-flex align-items-center">
+              <GlobeSVG/>
+              <div className="text-muted font-10">
+                anyone 
+              </div>
+              
+              </div>
+              
             </div>
           </div>
           <input
@@ -100,6 +105,7 @@ export default function PostPost({ image, name, surname }) {
             <div className="d-flex align-items-center mr-4">
               <ChatSVG />
               <span>Anyone</span>
+            
             </div>
             <Button
               variant="secondary"
@@ -218,7 +224,7 @@ const GlobeSVG = () => {
       viewBox="0 0 16 16"
       data-supported-dps="16x16"
       fill="currentColor"
-      className="mercado-match"
+      className="mr-1"
       width="12"
       height="12"
       focusable="false">
