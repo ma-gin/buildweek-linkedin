@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Button, NavDropdown, Modal } from "react-bootstrap"
 
-export default function PostPost({ image }) {
+export default function PostPost({ image, name, surname }) {
   const [post, setPost] = useState({ text: undefined })
 
   const [show, setShow] = useState(false)
@@ -28,7 +28,7 @@ export default function PostPost({ image }) {
           "Content-type": "application/json",
         },
       })
-      console.log("posted")
+      // refetch here
     } catch (error) {
       console.log(error)
     }
@@ -71,10 +71,10 @@ export default function PostPost({ image }) {
         </Modal.Header>
         <Modal.Body className="modal-post">
           <div className="d-flex font-12">
-            <img src="" alt="" />
+            <img className="post-img object-top mr-2" src={image} alt="" />
             <div className="d-flex flex-column">
-              <span>Name</span>
-              <NavDropdown title="anyone">
+              <span>{`${name} ${surname}`}</span>
+              <NavDropdown className="text-muted" title="anyone">
                 <GlobeSVG />
               </NavDropdown>
             </div>
@@ -105,6 +105,7 @@ export default function PostPost({ image }) {
               variant="secondary"
               onClick={(e) => {
                 handleSubmit(e)
+                handleClose()
               }}>
               Post
             </Button>
