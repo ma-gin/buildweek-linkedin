@@ -57,6 +57,7 @@ const SinglePost = (props) => {
       })
         .then((response) => {
           console.log(response)
+          props.fetch()
         })
         .catch((error) => {
           console.log(error)
@@ -73,11 +74,13 @@ const SinglePost = (props) => {
         },
       })
       if (response.ok) {
-        alert("Modified successfully")
+        console.log("OkOkOk")
       }
     } catch (error) {
       console.log(error)
     }
+
+
     
   }
 
@@ -177,7 +180,7 @@ const SinglePost = (props) => {
       {clicked && (
         <Form
           style={{ borderTop: "1px solid gray", paddingTop: "20px" }}
-          onSubmit={(event) => {handleSubmit(event); props.fetch()}}>
+          onSubmit={(event) => {handleSubmit(event)}}>
           <Form.Group controlId="formBasicText">
             <Form.Control
               type="text"
