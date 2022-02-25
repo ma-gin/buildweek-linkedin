@@ -2,7 +2,7 @@ import "./App.css"
 import MyNavbar from "./components/MyNavbar"
 import MainSection from "./components/MainSection"
 import { useEffect, useState } from "react"
-import { HashRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import NewsMain from "./components/NewsMain"
 
 function App() {
@@ -13,7 +13,6 @@ function App() {
   useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     imageRendered = !imageRendered
-   
   })
 
   let imageRendered = true
@@ -27,16 +26,21 @@ function App() {
     setFet(value)
   }
 
-  
-
   return (
-    <HashRouter basename="/">
-      {imageRendered ? <MyNavbar image={img} funcD={fet}/> : <MyNavbar funcD={fet} />}
+    <BrowserRouter>
+      {imageRendered ? (
+        <MyNavbar image={img} funcD={fet} />
+      ) : (
+        <MyNavbar funcD={fet} />
+      )}
       <Routes>
         <Route path="/" element={<NewsMain changeImg={changeImg} />} />
-        <Route path="/profile/:profileId" element={<MainSection fetchD={changeFet}/>} />
+        <Route
+          path="/profile/:profileId"
+          element={<MainSection fetchD={changeFet} />}
+        />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 
