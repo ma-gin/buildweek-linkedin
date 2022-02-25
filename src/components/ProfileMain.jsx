@@ -3,10 +3,13 @@ import { useEffect, useState } from "react"
 import "../App.css"
 import "../profile.css"
 import axios from "axios"
+import { useParams } from "react-router-dom"
 
 export default function ProfileMain(props) {
   const [user, setUser] = useState({})
   const [show, setShow] = useState(false)
+
+  let params = useParams()
 
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
@@ -77,7 +80,8 @@ export default function ProfileMain(props) {
         alt="cover"
       />
       <img className="profile-img object-top" src={user.image} alt="profile" />
-      <i className="bi bi-pencil pen-lg" onClick={() => handleShow()}></i>
+{params.profileId === '62141c010448b4001511688d' && 
+      <i className="bi bi-pencil pen-lg" onClick={() => handleShow()}></i>}
       <div className="profile-card m-4">
         <Row>
           <Col xs={6}>
@@ -101,7 +105,8 @@ export default function ProfileMain(props) {
             </div>
           </Col>
         </Row>
-        <Row>
+        <Row>{params.profileId === '62141c010448b4001511688d' &&
+          <>
           <div className="pl-3 mt-4 d-flex align-items-center">
             <Button className="generic-btn">Open to</Button>
             <Button className="generic-btn" variant="outline-primary">
@@ -110,7 +115,7 @@ export default function ProfileMain(props) {
             <Button className="generic-btn" variant="outline-secondary">
               More
             </Button>
-          </div>
+          </div></>}
         </Row>
         <Row className="d-none">
           <Col xs={6}>
