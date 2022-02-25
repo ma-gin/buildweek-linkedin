@@ -151,7 +151,7 @@ const SinglePost = (props) => {
             <i
               className="bi bi-trash3 d-block"
               style={{ color: "red", cursor: "pointer" }}
-              onClick={() => deleteData()}></i>
+              onClick={() => {deleteData(); props.fetch()}}></i>
           </div>
         )}
       </div>
@@ -176,7 +176,7 @@ const SinglePost = (props) => {
       {clicked && (
         <Form
           style={{ borderTop: "1px solid gray", paddingTop: "20px" }}
-          onSubmit={(event) => handleSubmit(event)}>
+          onSubmit={(event) => {handleSubmit(event); props.fetch()}}>
           <Form.Group controlId="formBasicText">
             <Form.Control
               type="text"
