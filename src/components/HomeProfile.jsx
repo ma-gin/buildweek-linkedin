@@ -28,8 +28,8 @@ export default function HomeProfile({ me }) {
           <p>Who viewed your profile</p>
         </div>
         <div className="d-flex flex-column justify-content-between link pl-2">
-          <p>500+</p>
-          <p>500+</p>
+          <p>4953</p>
+          <p>7483</p>
         </div>
       </div>
       <div className="text-left try-prem-home p-2">

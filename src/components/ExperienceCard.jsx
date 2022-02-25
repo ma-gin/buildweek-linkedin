@@ -2,6 +2,7 @@ import ExperienceCardSec from "./ExperienceCardSec"
 import { useEffect, useState } from "react"
 import AddExperience from "./AddExperience"
 import ModifyExperience from "./ModifyExperience"
+import { useParams } from "react-router-dom"
 
 export default function ExperienceCard(props) {
   const [user, setUser] = useState([])
@@ -25,6 +26,8 @@ export default function ExperienceCard(props) {
   useEffect(() => {
     fetchData()
   }, [])
+
+  let params = useParams()
 
   const httpFetch = props.parameters === "62141c010448b4001511688d" ? "https://striveschool-api.herokuapp.com/api/profile/62141c010448b4001511688d/experiences" : "https://striveschool-api.herokuapp.com/api/profile/" + props.parameters + "/experiences/" 
 
@@ -79,7 +82,7 @@ export default function ExperienceCard(props) {
         <div className="d-flex justify-content-between">
           <h4 className="mb-3"> Experiences</h4>
           <div>
-            <i
+           {params.profileId === '62141c010448b4001511688d' && <> <i
               className="bi bi-plus-lg mr-2"
               style={{ cursor: "pointer" }}
               onClick={() => {
@@ -91,6 +94,7 @@ export default function ExperienceCard(props) {
               className="bi bi-pencil"
               style={{ cursor: "pointer" }}
               onClick={() => editSelect()}></i>
+              </>}
           </div>
         </div>
         {user.map((userex) => (

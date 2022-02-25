@@ -40,12 +40,16 @@ const NewsMain = ({ changeImg }) => {
           <HomeSidebarLeft user={user} />
         </Col>
         <Col md={6}>
-          <PostPost image={user.image} />
+          <PostPost
+            image={user.image}
+            name={user.name}
+            surname={user.surname}
+          />
           <GetAPost />
         </Col>
         <Col md={4}>
           <LinkedNews title={"LinkedIn News"} />
-          <HomeFooter/>
+          <HomeFooter />
         </Col>
       </Row>
     </div>
