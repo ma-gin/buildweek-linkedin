@@ -15,23 +15,39 @@ import SidebarPeople from "./SidebarPeople"
 import SkillsCard from "./SkillsCard"
 import MyFooter from "./MyFooter"
 import { useParams } from "react-router-dom"
+import { useState, useEffect } from "react"
 
 
 const MainSection = () => {
+
+  const [infos, setInfos] = useState()
+
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    infosRendered = !infosRendered
+  })
+
+  let infosRendered = true
+
+  let change = (value) =>{
+
+    setInfos(value)
+  }
 
   let params = useParams()
   return (
     <div className="container padding-sec">
       <Row className="m-auto">
         <Col md={8}>
-          <ProfileMain parameters={params.profileId}/>
+          <ProfileMain parameters={params.profileId} bio={change}/>
            {params.profileId === "62141c010448b4001511688d" &&
            <>
           <AnalysisCard parameters={params.profileId}/>
           <ResourcesCard parameters={params.profileId}/>
           </>
           }
-          <InfosCard parameters={params.profileId}/>
+         { infosRendered&&<InfosCard parameters={params.profileId} bio={infos}/>}
           {params.profileId === "62141c010448b4001511688d" &&
           <ActivitiesCard parameters={params.profileId}/>}
           <ExperienceCard parameters={params.profileId}/>

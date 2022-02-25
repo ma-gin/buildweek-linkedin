@@ -16,8 +16,9 @@ export default function ProfileMain(props) {
 
   useEffect(() => {
     fetchData()
+    props.bio(user.bio)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [!user.bio])
 
   const formData = new FormData()
 

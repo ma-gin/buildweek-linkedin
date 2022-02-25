@@ -1,8 +1,16 @@
 import { useParams } from "react-router-dom"
-
+import { useEffect } from "react"
 
 const InfosCardSec = (props) => {
 let params = useParams()
+
+let bioRendered = false
+
+useEffect(() => {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  bioRendered = !bioRendered
+})
+
     return(  
       <>
   <div className='d-flex justify-content-between'>
