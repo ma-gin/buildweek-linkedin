@@ -180,7 +180,7 @@ const SinglePost = (props) => {
       {clicked && (
         <Form
           style={{ borderTop: "1px solid gray", paddingTop: "20px" }}
-          onSubmit={(event) => {handleSubmit(event)}}>
+          onSubmit={(event) => {handleSubmit(event); setDots(!dots); setClicked(!clicked)}}>
           <Form.Group controlId="formBasicText">
             <Form.Control
               type="text"
