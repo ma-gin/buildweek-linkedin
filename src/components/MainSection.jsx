@@ -16,16 +16,19 @@ import SkillsCard from "./SkillsCard"
 import MyFooter from "./MyFooter"
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
+import { propTypes } from "react-bootstrap/esm/Image"
 
 
-const MainSection = () => {
+const MainSection = (props) => {
 
   const [infos, setInfos] = useState()
 
+  const [func, setFunc] = useState()
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     infosRendered = !infosRendered
+    props.fetchD(func)
   })
 
   let infosRendered = true
@@ -35,12 +38,17 @@ const MainSection = () => {
     setInfos(value)
   }
 
+  let changes = (value) =>{
+
+    setFunc(value)
+  }
+
   let params = useParams()
   return (
     <div className="container padding-sec">
       <Row className="m-auto">
         <Col md={8}>
-          <ProfileMain parameters={params.profileId} bio={change}/>
+          <ProfileMain parameters={params.profileId} bio={change} fetchD={changes}/>
            {params.profileId === "62141c010448b4001511688d" &&
            <>
           <AnalysisCard parameters={params.profileId}/>

@@ -11,7 +11,7 @@ import NewsMain from "./NewsMain"
 import MainSection from "./MainSection"
 import { useEffect } from "react"
 
-const MyNavbar = function ({ image }) {
+const MyNavbar = function ({ image, funcD }) {
   const location = useLocation()
   let imageRendered = false
 
@@ -65,7 +65,8 @@ const MyNavbar = function ({ image }) {
                     location.pathname === "/profile/62141c010448b4001511688d"
                       ? "text-black"
                       : "text-muted"
-                  }>
+                  }
+                  onClick={()=> funcD()}>
                   <img className="nav-img object-top" src={image} alt="" />
                 </Link>
                 <NavDropdown
