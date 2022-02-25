@@ -9,6 +9,11 @@ const GetAPost = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [!posts])
 
+  const change = (value) => {
+
+    setPosts(value)
+  }
+
   const getFetch = async () => {
     try {
       let response = await fetch(
@@ -22,7 +27,8 @@ const GetAPost = () => {
       )
 
       let data = await response.json()
-      setPosts(data)
+      change(data)
+      console.log(data)
     } catch (error) {
       console.log(error)
     }
@@ -42,6 +48,7 @@ const GetAPost = () => {
           .filter((post, idx) => idx > posts.length - 20 && idx < posts.length)
           .map((post) => (
             <SinglePost
+            fetch={getFetch}
               username={post.user.name + " " + post.user.surname}
               image={post.image}
               text={post.text}
@@ -49,6 +56,8 @@ const GetAPost = () => {
               unique={post._id}
               params={post.user._id}
               userimg={post.user.image}
+              job={post.user.title}
+              date={post.createdAt}
             />
           ))}
     </>
