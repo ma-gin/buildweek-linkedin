@@ -149,19 +149,19 @@ const SinglePost = (props) => {
       </div>
       <div className="d-flex justify-content-between" style={{ borderTop: "1px solid gray", paddingTop: "20px" }} >
           <div className="pointer">
-          <i class="bi bi-hand-thumbs-up mr-2"></i>
+          <i className="bi bi-hand-thumbs-up mr-2"></i>
           <span >Like</span>
           </div>
           <div className="pointer">
-          <i class="bi bi-chat-left-dots mr-2"></i>
+          <i className="bi bi-chat-left-dots mr-2"></i>
           <span >Comment</span>
           </div>
           <div className="pointer">
-          <i class="bi bi-arrow-90deg-right mr-2"></i>
+          <i className="bi bi-arrow-90deg-right mr-2"></i>
           <span >Share</span>
           </div>
           <div className="pointer" >
-          <i class="bi bi-send-fill mr-2"></i>
+          <i className="bi bi-send-fill mr-2"></i>
           <span >Send</span>
           </div>
           </div>

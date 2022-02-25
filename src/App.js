@@ -10,7 +10,6 @@ function App() {
   // useEffect(changeImg)
 
   useEffect(() => {
-    console.log(img)
     // eslint-disable-next-line react-hooks/exhaustive-deps
     imageRendered = !imageRendered
   })

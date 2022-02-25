@@ -16,7 +16,6 @@ const MyNavbar = function ({ image }) {
   let imageRendered = false
 
   useEffect(() => {
-    console.log(image)
     // eslint-disable-next-line react-hooks/exhaustive-deps
     imageRendered = !imageRendered
   }, [!image])
