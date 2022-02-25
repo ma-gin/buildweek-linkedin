@@ -1,24 +1,24 @@
 export default function HomeDiscover() {
   return (
-    <div className="card-section font-8 mt-2 p-2 sticky-top text-muted">
+    <div className="card-section font-10 mt-2 p-2 sticky-top text-muted">
       <div className="position-relative">
         <div className="collapser">
           <h6 className="font-10 text-black">Recent</h6>
           <div className="d-flex flex-column">
             <div className="d-flex align-items-center mb-1">
               <CalendarSVG />
-              <span className="font-8">People Trends in 2022</span>
+              <span className="">People Trends in 2022</span>
             </div>
-            <div className="d-flex">
+            <div className="d-flex align-items-center">
               <PeopleSVG />
-              <span className="font-8">All things Javascript</span>
+              <span>All things Javascript</span>
             </div>
           </div>
         </div>
         <div className="collapser">
-          <h6 className="link font-8 mt-2">Groups</h6>
+          <h6 className="link font-10 mt-2">Groups</h6>
           <div className="d-flex flex-column font-10">
-            <div className="d-flex">
+            <div className="d-flex align-items-center">
               <PeopleSVG />
               <span>All things Javascript</span>
             </div>
@@ -27,11 +27,11 @@ export default function HomeDiscover() {
         </div>
         <div className="collapser">
           <div className="d-flex">
-            <h6 className="link font-8 mt-2">Events</h6>
+            <h6 className="link font-10 mt-2">Events</h6>
           </div>
           <div className="d-flex align-items-center">
             <CalendarSVG />
-            <span className="font-8">People Trends in 2022</span>
+            <span className="">People Trends in 2022</span>
           </div>
         </div>
         <div className="link mt-2">Followed Hashtags</div>

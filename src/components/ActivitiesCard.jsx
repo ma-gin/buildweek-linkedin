@@ -8,14 +8,14 @@ export default function ActivitiesCard(props) {
         <div className="d-flex justify-content-between">
           <div>
             <h4 className="mb-3"> Activities</h4>
-            <p className="link">500+ follower</p>
+            <p className="link">500+ followers</p>
           </div>
           <Button className="generic-btn" variant="outline-primary">
             Create a post
           </Button>
         </div>
         <ActivitiesCardSec
-          titleText={"Are 3 weeks that you are not posting news"}
+          titleText={"Please post something, we need it."}
           description={
             "The most recent posts you share and comments will appear here."
           }
