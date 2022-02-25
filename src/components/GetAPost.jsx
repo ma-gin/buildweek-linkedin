@@ -44,8 +44,7 @@ const GetAPost = () => {
         </div>
       )}
       {posts &&
-        posts
-          .filter((post, idx) => idx > posts.length - 20 && idx < posts.length)
+        posts.filter((post, idx) => idx > posts.length - 20 && idx < posts.length).reverse()
           .map((post) => (
             <SinglePost
             fetch={getFetch}
