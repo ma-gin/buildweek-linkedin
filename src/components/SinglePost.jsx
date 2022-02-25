@@ -12,6 +12,10 @@ const SinglePost = (props) => {
   const [post, setPost] = useState({
     text: undefined,
   })
+
+  let date = props.date.toLocaleString('en-GB', { timeZone: 'UTC' })
+
+  
   const postId = props.unique
   // const userId = "62141c010448b4001511688d"
 
@@ -113,9 +117,13 @@ const SinglePost = (props) => {
       <div className="d-flex justify-content-between">
         <div className="d-flex align-items-center mb-3">
           <img className="post-img mr-2" src={props.userimg} alt="" />
+          <div>
           <Link to={"/profile/" + props.params} element={<MainSection />}>
-            <h6> {props.username}</h6>
+            <h6 className="mb-0"> {props.username}</h6>
           </Link>
+          <span className="text-muted font-12 text-one">{props.job}</span>
+          <span className="text-muted font-11 text-one">{date}</span>
+          </div>
         </div>
        { props.params=== '62141c010448b4001511688d'&& 
         <i

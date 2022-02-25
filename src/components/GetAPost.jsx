@@ -23,6 +23,7 @@ const GetAPost = () => {
 
       let data = await response.json()
       setPosts(data)
+      console.log(data)
     } catch (error) {
       console.log(error)
     }
@@ -49,6 +50,8 @@ const GetAPost = () => {
               unique={post._id}
               params={post.user._id}
               userimg={post.user.image}
+              job={post.user.title}
+              date={post.createdAt}
             />
           ))}
     </>
