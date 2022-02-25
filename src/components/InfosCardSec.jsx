@@ -21,7 +21,6 @@ const InfosCardSec = (props) => {
       </div>
       <div>
         <span className="font-14">{props.description}</span>
-        <p className="mt-1 font-14">King Kong ain't got nothin on me!</p>
       </div>
     </>
   )
