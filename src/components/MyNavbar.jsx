@@ -9,16 +9,38 @@ import {
 import { Link, useLocation } from "react-router-dom"
 import NewsMain from "./NewsMain"
 import MainSection from "./MainSection"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
+
 
 const MyNavbar = function ({ image, funcD }) {
+ 
+
+  const [user, setUser] = useState({})
+
   const location = useLocation()
-  let imageRendered = false
+  // let imageRendered = false
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    imageRendered = !imageRendered
-  }, [!image])
+    // imageRendered = !imageRendered
+    fetchData()
+  }, [])
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch("https://striveschool-api.herokuapp.com/api/profile/me", {
+        headers: {
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjE0MWMwMTA0NDhiNDAwMTUxMTY4OGQiLCJpYXQiOjE2NDU0ODUwNTcsImV4cCI6MTY0NjY5NDY1N30.RpYP2LhIfMwWh9okgKoO9hO9xHHxMIrpOw6PlnVfviI",
+        },
+      })
+      const data = await response.json()
+      console.log(data)
+      setUser(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   // useEffect(console.log(image))
 
@@ -67,7 +89,7 @@ const MyNavbar = function ({ image, funcD }) {
                       : "text-muted"
                   }
                   onClick={()=> funcD()}>
-                  <img className="nav-img object-top" src={image} alt="" />
+                  <img className="nav-img object-top" src={user.image} alt="" />
                 </Link>
                 <NavDropdown
                   title="Me"
