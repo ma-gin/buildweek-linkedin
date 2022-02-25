@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/buildweek-linkedin/static/css/main.d83648e7.css",
+    "main.js": "/buildweek-linkedin/static/js/main.4f2363b0.js",
+    "static/js/787.ff6bc03b.chunk.js": "/buildweek-linkedin/static/js/787.ff6bc03b.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/buildweek-linkedin/static/media/bootstrap-icons.c1d7432ee75fa194e499.woff",
+    "static/media/bootstrap-icons.woff2?": "/buildweek-linkedin/static/media/bootstrap-icons.a13b815539b49de48d23.woff2",
+    "index.html": "/buildweek-linkedin/index.html",
+    "main.d83648e7.css.map": "/buildweek-linkedin/static/css/main.d83648e7.css.map",
+    "main.4f2363b0.js.map": "/buildweek-linkedin/static/js/main.4f2363b0.js.map",
+    "787.ff6bc03b.chunk.js.map": "/buildweek-linkedin/static/js/787.ff6bc03b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d83648e7.css",
+    "static/js/main.4f2363b0.js"
+  ]
+}
