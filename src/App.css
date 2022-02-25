@@ -314,3 +314,8 @@ footer .bi-linkedin {
 .sticky-top {
   top: 64px !important;
 }
+
+
+.prime:hover{
+  color: var(--link-blue)!important;
+}

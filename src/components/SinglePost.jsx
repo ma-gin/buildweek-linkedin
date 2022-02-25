@@ -129,7 +129,7 @@ const SinglePost = (props) => {
           <img className="post-img mr-2" src={props.userimg} alt="" />
           <div>
           <Link to={"/profile/" + props.params} element={<MainSection />}>
-            <h6 className="mb-0 text-black"> {props.username}</h6>
+            <h6 className="mb-0 text-black prime"> {props.username}</h6>
           </Link>
           <span className="text-muted font-12 text-one">{props.job}</span>
           <span className="text-muted font-11 text-one">{date.slice(0,10) + " • " + date.slice(11,19)}</span>
