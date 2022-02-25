@@ -117,14 +117,14 @@ const SinglePost = (props) => {
             <h6> {props.username}</h6>
           </Link>
         </div>
-
+       { props.params=== '62141c010448b4001511688d'&& 
         <i
           className="bi bi-three-dots d-block"
           style={{ cursor: "pointer" }}
           onClick={() => {
             setDots(!dots)
             setClicked(false)
-          }}></i>
+          }}></i>}
       </div>
       <div className="d-flex justify-content-between">
         <div className="d-flex flex-column">
