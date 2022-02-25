@@ -80,6 +80,7 @@ const SinglePost = (props) => {
       })
       if (response.ok) {
         console.log("OkOkOk")
+        props.fetch()
       }
     } catch (error) {
       console.log(error)
